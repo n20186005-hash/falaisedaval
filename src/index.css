@@ -181,7 +181,7 @@
 .google-maps-attribution .gmnoprint,
 .google-maps-attribution a[href*="maps.google.com"],
 .google-maps-attribution a[href*="maps.app.goo.gl"],
-.google-maps-attribution . Attribution,
+.google-maps-attribution .Attribution,
 iframe[src*="google.com/maps"] + div,
 iframe[src*="google.com/maps"] ~ div {
   opacity: 0.3 !important;

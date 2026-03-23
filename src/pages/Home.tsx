@@ -89,7 +89,7 @@ export default function Home({ targetSection }: HomeProps) {
       { src: g3, alt: t("暮色与低潮礁滩的层次") },
       { src: g4, alt: t("悬崖步道俯瞰：Aiguille 与海湾") },
     ],
-    [],
+    [t],
   );
 
   return (
@@ -185,12 +185,12 @@ export default function Home({ targetSection }: HomeProps) {
                 className="relative"
               >
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="secondary" className="rounded-full">{t(t("自然景观点"))}</Badge>
-                  <Badge variant="secondary" className="rounded-full">{t(t("评分 4.8/5（Google）"))}</Badge>
-                  <Badge variant="secondary" className="rounded-full">{t(t("24 小时开放"))}</Badge>
+                  <Badge variant="secondary" className="rounded-full">{t("自然景观点")}</Badge>
+                  <Badge variant="secondary" className="rounded-full">{t("评分 4.8/5（Google）")}</Badge>
+                  <Badge variant="secondary" className="rounded-full">{t("24 小时开放")}</Badge>
                 </div>
 
-                <h1 className="mt-5 text-5xl sm:text-6xl leading-[0.9]">{t(t("面向英吉利海峡的"))}<span className="block">{t(t("纪念碑级拱门"))}</span>
+                <h1 className="mt-5 text-5xl sm:text-6xl leading-[0.9]">{t("面向英吉利海峡的")}<span className="block">{t("纪念碑级拱门")}</span>
                 </h1>
 
                 <p className="mt-4 max-w-xl text-lg text-muted-foreground">
@@ -199,10 +199,10 @@ export default function Home({ targetSection }: HomeProps) {
 
                 <div className="mt-7 flex flex-wrap gap-3">
                   <Button asChild>
-                    <Link href="/overview">{t(t("开始了解"))}</Link>
+                    <Link href="/overview">{t("开始了解")}</Link>
                   </Button>
                   <Button asChild variant="outline">
-                    <Link href="/photos">{t(t("看照片"))}</Link>
+                    <Link href="/photos">{t("看照片")}</Link>
                   </Button>
                 </div>
 
@@ -210,7 +210,7 @@ export default function Home({ targetSection }: HomeProps) {
                   <Card className="hairline rounded-2xl p-4 bg-card/70">
                     <div className="flex items-center gap-2">
                       <Compass className="h-4 w-4" />
-                      <div className="text-sm font-medium">{t(t("位置"))}</div>
+                      <div className="text-sm font-medium">{t("位置")}</div>
                     </div>
                     <div className="mt-2 text-sm text-muted-foreground">Étretat, France</div>
                   </Card>
@@ -224,9 +224,9 @@ export default function Home({ targetSection }: HomeProps) {
                   <Card className="hairline rounded-2xl p-4 bg-card/70">
                     <div className="flex items-center gap-2">
                       <Mountain className="h-4 w-4" />
-                      <div className="text-sm font-medium">{t(t("关键词"))}</div>
+                      <div className="text-sm font-medium">{t("关键词")}</div>
                     </div>
-                    <div className="mt-2 text-sm text-muted-foreground">{t(t("拱门 / 针状岩 / 低潮 / 观景步道"))}</div>
+                    <div className="mt-2 text-sm text-muted-foreground">{t("拱门 / 针状岩 / 低潮 / 观景步道")}</div>
                   </Card>
                 </div>
               </motion.div>
@@ -279,7 +279,7 @@ export default function Home({ targetSection }: HomeProps) {
                     <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
                       Porte d’Aval
                     </div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t(t("海蚀拱门像一座天然“门洞”，在不同光线下呈现完全不同的层次。"))}</p>
+                    <p className="mt-2 text-sm text-muted-foreground">{t("海蚀拱门像一座天然“门洞”，在不同光线下呈现完全不同的层次。")}</p>
                   </div>
                   <Camera className="h-5 w-5 text-muted-foreground" />
                 </div>
@@ -291,7 +291,7 @@ export default function Home({ targetSection }: HomeProps) {
                     <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
                       L’Aiguille
                     </div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t(t("“针状岩”立在海中，是摄影构图里的稳定锚点：广角看尺度，长焦看纹理。"))}</p>
+                    <p className="mt-2 text-sm text-muted-foreground">{t("“针状岩”立在海中，是摄影构图里的稳定锚点：广角看尺度，长焦看纹理。")}</p>
                   </div>
                   <Waves className="h-5 w-5 text-muted-foreground" />
                 </div>
@@ -300,15 +300,15 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>{t(t("低潮可达"))}</div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t(t("许多近景视角只在低潮窗口出现；涨潮会迅速抹掉路径。安全第一。"))}</p>
+                    <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>{t("低潮可达")}</div>
+                    <p className="mt-2 text-sm text-muted-foreground">{t("许多近景视角只在低潮窗口出现；涨潮会迅速抹掉路径。安全第一。")}</p>
                   </div>
                   <ShieldAlert className="h-5 w-5 text-muted-foreground" />
                 </div>
               </Card>
             </div>
 
-            <div className="mt-8 text-xs text-muted-foreground">{t(t("说明：页面基础信息（评分、开放时间、Plus Code）来自 Google Maps；地貌与观景建议参考公开旅游信息。"))}</div>
+            <div className="mt-8 text-xs text-muted-foreground">{t("说明：页面基础信息（评分、开放时间、Plus Code）来自 Google Maps；地貌与观景建议参考公开旅游信息。")}</div>
           </div>
         </section>
 
@@ -357,7 +357,7 @@ export default function Home({ targetSection }: HomeProps) {
             <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.1fr]">
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Quick plan</div>
-                <h3 className="mt-2 text-2xl leading-tight">{t(t("半日路线（不赶）"))}</h3>
+                <h3 className="mt-2 text-2xl leading-tight">{t("半日路线（不赶）")}</h3>
                 <Separator className="my-5" />
                 <ol className="space-y-4 text-sm">
                   <li className="flex gap-3">
@@ -365,8 +365,8 @@ export default function Home({ targetSection }: HomeProps) {
                       1
                     </div>
                     <div>
-                      <div className="font-medium">{t(t("海滩侧先取一个‘远景点’"))}</div>
-                      <div className="text-muted-foreground mt-1">{t(t("先用远景确定拱门、针状岩、浪线关系，再决定是否近距离探索。"))}</div>
+                      <div className="font-medium">{t("海滩侧先取一个‘远景点’")}</div>
+                      <div className="text-muted-foreground mt-1">{t("先用远景确定拱门、针状岩、浪线关系，再决定是否近距离探索。")}</div>
                     </div>
                   </li>
                   <li className="flex gap-3">
@@ -374,8 +374,8 @@ export default function Home({ targetSection }: HomeProps) {
                       2
                     </div>
                     <div>
-                      <div className="font-medium">{t(t("低潮窗口进入礁滩（可选）"))}</div>
-                      <div className="text-muted-foreground mt-1">{t(t("只在你确定潮汐与退路时进入；不要把‘拍到’建立在‘赌一把’上。"))}</div>
+                      <div className="font-medium">{t("低潮窗口进入礁滩（可选）")}</div>
+                      <div className="text-muted-foreground mt-1">{t("只在你确定潮汐与退路时进入；不要把‘拍到’建立在‘赌一把’上。")}</div>
                     </div>
                   </li>
                   <li className="flex gap-3">
@@ -383,8 +383,8 @@ export default function Home({ targetSection }: HomeProps) {
                       3
                     </div>
                     <div>
-                      <div className="font-medium">{t(t("上崖顶步道看轮廓与光线"))}</div>
-                      <div className="text-muted-foreground mt-1">{t(t("崖顶更适合全景与日落光；风大时注意站位与边缘距离。"))}</div>
+                      <div className="font-medium">{t("上崖顶步道看轮廓与光线")}</div>
+                      <div className="text-muted-foreground mt-1">{t("崖顶更适合全景与日落光；风大时注意站位与边缘距离。")}</div>
                     </div>
                   </li>
                 </ol>
@@ -395,8 +395,8 @@ export default function Home({ targetSection }: HomeProps) {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Safety</div>
-                      <h3 className="mt-2 text-2xl leading-tight">{t(t("潮汐提醒"))}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{t(t("谷地/礁滩区域一旦涨潮，很容易被海水“切断”回程。最稳妥："))}<span className="font-medium text-foreground">{t(t("只在低潮窗口进入"))}</span>{t(t("{t("，并预留至少 1 小时回撤。")}"))}</p>
+                      <h3 className="mt-2 text-2xl leading-tight">{t("潮汐提醒")}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">{t("谷地/礁滩区域一旦涨潮，很容易被海水“切断”回程。最稳妥：")}<span className="font-medium text-foreground">{t("只在低潮窗口进入")}</span>{t("，并预留至少 1 小时回撤。")}</p>
                     </div>
                     <ShieldAlert className="h-5 w-5 text-muted-foreground" />
                   </div>
@@ -406,8 +406,8 @@ export default function Home({ targetSection }: HomeProps) {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Footing</div>
-                      <h3 className="mt-2 text-2xl leading-tight">{t(t("鞋子与步行"))}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{t(t("鹅卵石路面更费力且更滑，建议穿防滑鞋；摄影党最好带长焦与防风外套。"))}</p>
+                      <h3 className="mt-2 text-2xl leading-tight">{t("鞋子与步行")}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">{t("鹅卵石路面更费力且更滑，建议穿防滑鞋；摄影党最好带长焦与防风外套。")}</p>
                     </div>
                     <Footprints className="h-5 w-5 text-muted-foreground" />
                   </div>
@@ -534,7 +534,7 @@ export default function Home({ targetSection }: HomeProps) {
                   href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8"
                   target="_blank"
                   rel="noreferrer"
-                >{t(t("在 Google Maps 里规划路线"))}<ExternalLink className="ml-2 h-4 w-4" />
+                >{t("在 Google Maps 里规划路线")}<ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>
@@ -557,12 +557,12 @@ export default function Home({ targetSection }: HomeProps) {
             <div className="mt-10 grid gap-4 lg:grid-cols-3">
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Open hours</div>
-                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t(t("24 小时开放"))}</div>
-                <p className="mt-2 text-sm text-muted-foreground">{t(t("自然景观点；部分近景路线受潮汐/天气影响。"))}</p>
+                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t("24 小时开放")}</div>
+                <p className="mt-2 text-sm text-muted-foreground">{t("自然景观点；部分近景路线受潮汐/天气影响。")}</p>
               </Card>
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Best light</div>
-                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t(t("日落前后"))}</div>
+                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t("日落前后")}</div>
                 <p className="mt-2 text-sm text-muted-foreground">{t("逆光或侧逆光会强调悬崖纹理；阴天则更适合拍“冷色电影感”。")}</p>
               </Card>
               <Card className="hairline rounded-2xl p-6">
