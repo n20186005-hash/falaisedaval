@@ -463,6 +463,22 @@ export default function Home({ targetSection }: HomeProps) {
               title={t("真实游客评价")}
             />
 
+            <div className="mt-6 mb-8 p-5 bg-muted/30 rounded-xl border-l-4 border-primary">
+              <p className="font-semibold text-lg flex items-center gap-2">
+                {t("评价 - 游客怎么说")}
+              </p>
+              <div className="mt-2 flex items-center gap-3">
+                <span className="text-xl font-bold">4.8</span>
+                <div className="flex text-yellow-500 text-sm">
+                  {'★★★★★'.split('').map((star, j) => <span key={j}>{star}</span>)}
+                </div>
+                <span className="text-sm text-muted-foreground">(21,394 {t("条评价")})</span>
+              </div>
+              <p className="text-sm text-muted-foreground mt-3">
+                {t("评分与评论数据来源于 Google Maps（最后更新：2026 年）。我们仅展示部分经核实的高分评价。如需查看完整最新评论，请点击下方链接。")}
+              </p>
+            </div>
+
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 { name: "Jean-Pierre", role: t("本地嚮導"), date: t("1 個月前"), content: t("這絕對是諾曼第最壯觀的海岸線。白色的白堊懸崖（Porte d'Aval）和針岩（L'Aiguille）令人驚嘆。記得穿適合在鵝卵石上行走的鞋子，而且一定要在退潮時去探索那些隱藏的洞穴。") },
@@ -547,12 +563,12 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Best light</div>
                 <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t(t("日落前后"))}</div>
-                <p className="mt-2 text-sm text-muted-foreground">{t(t("逆光或侧逆光会强调悬崖纹理；阴天则更适合拍“冷色电影感”。"))}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{t("逆光或侧逆光会强调悬崖纹理；阴天则更适合拍“冷色电影感”。")}</p>
               </Card>
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Mini rule</div>
-                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t(t("远离边缘"))}</div>
-                <p className="mt-2 text-sm text-muted-foreground">{t(t("崖顶风强且边缘松散，请保持距离；拍照时更不要背对海风走近边缘。"))}</p>
+                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t("远离边缘")}</div>
+                <p className="mt-2 text-sm text-muted-foreground">{t("崖顶风强且边缘松散，请保持距离；拍照时更不要背对海风走近边缘。")}</p>
               </Card>
             </div>
           </div>
@@ -560,17 +576,17 @@ export default function Home({ targetSection }: HomeProps) {
 
         <section id="sources" className="scroll-mt-24">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-            <SectionTitle kicker="sources" title=t("数据与引用") desc=t("为了保持信息可信，我们只引用可公开访问的页面。") />
+            <SectionTitle kicker="sources" title={t("数据与引用")} desc={t("为了保持信息可信，我们只引用可公开访问的页面。")} />
 
             <div className="mt-8 grid gap-4">
               <Card className="hairline rounded-2xl p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <div className="text-sm font-medium">{t(t("Google Maps（地点基础信息）"))}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{t(t("评分、开放时间、Plus Code、简介等（可能随时间变化）"))}</div>
+                    <div className="text-sm font-medium">{t("Google Maps（地点基础信息）")}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{t("评分、开放时间、Plus Code、简介等（可能随时间变化）")}</div>
                   </div>
                   <Button asChild variant="outline" size="sm">
-                    <a href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8" target="_blank" rel="noreferrer">{t(t("打开"))}<ExternalLink className="ml-2 h-4 w-4" />
+                    <a href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8" target="_blank" rel="noreferrer">{t("打开")}<ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </div>
@@ -579,11 +595,11 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <div className="text-sm font-medium">{t(t("参考站点：plagedetretat.com"))}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{t(t("版式节奏与栏目结构参考（非内容复制）"))}</div>
+                    <div className="text-sm font-medium">{t("参考站点：plagedetretat.com")}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{t("版式节奏与栏目结构参考（非内容复制）")}</div>
                   </div>
                   <Button asChild variant="outline" size="sm">
-                    <a href="https://www.plagedetretat.com/" target="_blank" rel="noreferrer">{t(t("打开"))}<ExternalLink className="ml-2 h-4 w-4" />
+                    <a href="https://www.plagedetretat.com/" target="_blank" rel="noreferrer">{t("打开")}<ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </div>
