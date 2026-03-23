@@ -455,8 +455,19 @@ export default function Home({ targetSection }: HomeProps) {
                 <h3 className="text-xl font-semibold mb-4">{t("不同点")}</h3>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                   <li>{t("Plage d’Étretat 主要是指宽阔的公共鹅卵石海滩，更适合休闲、听浪和观看全景。")}</li>
-                  <li>{t("Falaise d'Aval 侧重于南侧的悬崖、著名的拱门（Porte d'Aval）和针状岩（L'Aiguille），更具戏剧性和探险感。")}</li>
+                  <li>{t("Falaise d'Aval 侧重于南侧的悬崖，著名的拱门（Porte d'Aval）和针状岩（L'Aiguille），更具戏剧性和探险感。")}</li>
                   <li>{t("Falaise d'Aval 提供了悬崖顶部的徒步步道，可以从高处俯瞰海湾，而海滩主要在底部。")}</li>
+                </ul>
+              </Card>
+
+              <Card className="hairline rounded-2xl border-yellow-200 bg-yellow-50/50 p-6 dark:border-yellow-900 dark:bg-yellow-900/10">
+                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                  <span className="text-yellow-500">⚠️</span> {t("提示")}
+                </h3>
+                <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                  <li>{t("海滩严禁捡鹅卵石（有罚款）；悬崖下部分区域因落石风险，有官方禁入标志。")}</li>
+                  <li>{t("从海滩走到 Porte d'Aval 拱门，必须在低潮前后 4 小时内完成往返，避免涨潮被困。")}</li>
+                  <li>{t("若想同时打卡两者，建议先在海滩看全景，再沿步道上 Falaise d'Aval 的观景台拍日落。")}</li>
                 </ul>
               </Card>
             </div>
