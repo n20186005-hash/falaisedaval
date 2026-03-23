@@ -5,6 +5,19 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   fr: {
     translation: {
+      "Porte d'Aval / Étretat": "Porte d'Aval / Étretat",
+      "Porte d'Aval": "Porte d'Aval",
+      "L'Aiguille": "L'Aiguille",
+      "Plus Code": "Plus Code",
+
+      "Étretat, 法国": "Étretat, France",
+      "P54V+WC Étretat, 法国": "P54V+WC Étretat, France",
+      "快速计划": "Plan rapide",
+      "安全": "Sécurité",
+      "地形": "Terrain",
+      "对比": "Comparaison",
+      "评价": "Avis",
+
       "Falaise d'Aval": "Falaise d'Aval",
       "Étretat · Côte d'Albâtre": "Étretat · Côte d'Albâtre",
       "概览": "Aperçu",
@@ -56,8 +69,7 @@ const resources = {
       "Google Maps（地点基础信息）": "Google Maps (Informations de base sur le lieu)",
       "评分、开放时间、Plus Code、简介等（可能随时间变化）": "Note, heures d'ouverture, Plus Code, introduction, etc. (susceptibles de changer avec le temps)",
       "打开": "Ouvrir",
-      "参考站点：plagedetretat.com": "Site de référence : plagedetretat.com",
-      "版式节奏与栏目结构参考（非内容复制）": "Rythme de mise en page et référence de structure de colonne (pas de copie de contenu)",
+
       "阴天质感：Porte d'Aval 的拱门": "Texture nuageuse : L'arche de la Porte d'Aval",
       "海滩视角：拱门与海浪": "Vue de la plage : Arche et vagues",
       "暮色与低潮礁滩的层次": "Crépuscule et strates du récif à marée basse",
@@ -109,6 +121,18 @@ const resources = {
   },
   en: {
     translation: {
+      "Porte d'Aval / Étretat": "Porte d'Aval / Étretat",
+      "Porte d'Aval": "Porte d'Aval",
+      "L'Aiguille": "L'Aiguille",
+      "Plus Code": "Plus Code",
+      "Étretat, 法国": "Étretat, France",
+      "P54V+WC Étretat, 法国": "P54V+WC Étretat, France",
+      "快速计划": "Quick plan",
+      "安全": "Safety",
+      "地形": "Footing",
+      "对比": "Comparison",
+      "评价": "Reviews",
+
       "Falaise d'Aval": "Falaise d'Aval",
       "Étretat · Côte d'Albâtre": "Étretat · Alabaster Coast",
       "概览": "Overview",
@@ -160,8 +184,7 @@ const resources = {
       "Google Maps（地点基础信息）": "Google Maps (Basic location info)",
       "评分、开放时间、Plus Code、简介等（可能随时间变化）": "Rating, opening hours, Plus Code, intro, etc. (may change over time)",
       "打开": "Open",
-      "参考站点：plagedetretat.com": "Reference site: plagedetretat.com",
-      "版式节奏与栏目结构参考（非内容复制）": "Layout rhythm and column structure reference (not content copy)",
+
       "阴天质感：Porte d'Aval 的拱门": "Cloudy texture: Arch of Porte d'Aval",
       "海滩视角：拱门与海浪": "Beach view: Arch and waves",
       "暮色与低潮礁滩的层次": "Twilight and layers of low tide reef",
@@ -213,6 +236,18 @@ const resources = {
   },
   "zh-Hant": {
     translation: {
+      "Porte d'Aval / Étretat": "Porte d'Aval / Étretat",
+      "Porte d'Aval": "Porte d'Aval",
+      "L'Aiguille": "L'Aiguille",
+      "Plus Code": "Plus Code",
+      "Étretat, 法国": "Étretat, 法國",
+      "P54V+WC Étretat, 法国": "P54V+WC Étretat, 法國",
+      "快速计划": "快速計劃",
+      "安全": "安全",
+      "地形": "地形",
+      "对比": "對比",
+      "评价": "評價",
+
       "Falaise d'Aval": "Falaise d'Aval",
       "Étretat · Côte d'Albâtre": "Étretat · 白堊海岸",
       "概览": "概覽",
@@ -264,8 +299,7 @@ const resources = {
       "Google Maps（地点基础信息）": "Google Maps（地點基礎信息）",
       "评分、开放时间、Plus Code、简介等（可能随时间变化）": "評分、開放時間、Plus Code、簡介等（可能隨時間變化）",
       "打开": "打開",
-      "参考站点：plagedetretat.com": "參考站點：plagedetretat.com",
-      "版式节奏与栏目结构参考（非内容复制）": "版式節奏與欄目結構參考（非內容複製）",
+
       "阴天质感：Porte d'Aval 的拱门": "陰天質感：Porte d'Aval 的拱門",
       "海滩视角：拱门与海浪": "海灘視角：拱門與海浪",
       "暮色与低潮礁滩的层次": "暮色與低潮礁灘的層次",
@@ -320,6 +354,18 @@ const resources = {
   },
   de: {
     translation: {
+      "Porte d'Aval / Étretat": "Porte d'Aval / Étretat",
+      "Porte d'Aval": "Porte d'Aval",
+      "L'Aiguille": "L'Aiguille",
+      "Plus Code": "Plus Code",
+      "Étretat, 法国": "Étretat, Frankreich",
+      "P54V+WC Étretat, 法国": "P54V+WC Étretat, Frankreich",
+      "快速计划": "Schneller Plan",
+      "安全": "Sicherheit",
+      "地形": "Bodenbeschaffenheit",
+      "对比": "Vergleich",
+      "评价": "Bewertungen",
+
       "Falaise d'Aval": "Falaise d'Aval",
       "Étretat · Côte d'Albâtre": "Étretat · Alabasterküste",
       "概览": "Übersicht",
@@ -371,8 +417,7 @@ const resources = {
       "Google Maps（地点基础信息）": "Google Maps (Grundlegende Standortinformationen)",
       "评分、开放时间、Plus Code、简介等（可能随时间变化）": "Bewertung, Öffnungszeiten, Plus Code, Einführung usw. (können sich im Laufe der Zeit ändern)",
       "打开": "Öffnen",
-      "参考站点：plagedetretat.com": "Referenzseite: plagedetretat.com",
-      "版式节奏与栏目结构参考（非内容复制）": "Layout-Rhythmus und Spaltenstruktur-Referenz (keine Inhaltskopie)",
+
       "阴天质感：Porte d'Aval 的拱门": "Bewölkte Textur: Bogen der Porte d'Aval",
       "海滩视角：拱门与海浪": "Strandblick: Bogen und Wellen",
       "暮色与低潮礁滩的层次": "Dämmerung und Schichten des Riffs bei Ebbe",

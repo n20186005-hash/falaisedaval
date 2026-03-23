@@ -1,6 +1,5 @@
 /*
   Falaise d'Aval — Visitor Page
-  Inspired by plagedetretat.com: clean editorial rhythm, anchored sections, gallery carousel, map embed.
 */
 
 import { useEffect, useMemo } from "react";
@@ -84,7 +83,7 @@ export default function Home({ targetSection }: HomeProps) {
 
   const gallery = useMemo(
     () => [
-      { src: g1, alt: t("阴天质感：Porte d’Aval 的拱门") },
+      { src: g1, alt: t("阴天质感：Porte d'Aval 的拱门") },
       { src: g2, alt: t("海滩视角：拱门与海浪") },
       { src: g3, alt: t("暮色与低潮礁滩的层次") },
       { src: g4, alt: t("悬崖步道俯瞰：Aiguille 与海湾") },
@@ -104,10 +103,10 @@ export default function Home({ targetSection }: HomeProps) {
                 className="text-lg font-semibold"
                 style={{ fontFamily: "Cormorant Garamond" }}
               >
-                Falaise d’Aval
+                {t("Falaise d'Aval")}
               </div>
               <div className="hidden sm:block text-xs tracking-[0.18em] uppercase text-muted-foreground">
-                Étretat · Côte d’Albâtre
+                {t("Étretat · Côte d'Albâtre")}
               </div>
             </div>
 
@@ -212,14 +211,14 @@ export default function Home({ targetSection }: HomeProps) {
                       <Compass className="h-4 w-4" />
                       <div className="text-sm font-medium">{t("位置")}</div>
                     </div>
-                    <div className="mt-2 text-sm text-muted-foreground">Étretat, France</div>
+                    <div className="mt-2 text-sm text-muted-foreground">{t("Étretat, 法国")}</div>
                   </Card>
                   <Card className="hairline rounded-2xl p-4 bg-card/70">
                     <div className="flex items-center gap-2">
                       <MapPinned className="h-4 w-4" />
-                      <div className="text-sm font-medium">Plus Code</div>
+                      <div className="text-sm font-medium">{t("Plus Code")}</div>
                     </div>
-                    <div className="mt-2 text-sm text-muted-foreground">P54V+WC Étretat, France</div>
+                    <div className="mt-2 text-sm text-muted-foreground">{t("P54V+WC Étretat, 法国")}</div>
                   </Card>
                   <Card className="hairline rounded-2xl p-4 bg-card/70">
                     <div className="flex items-center gap-2">
@@ -240,7 +239,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <div className="relative overflow-hidden rounded-[2.2rem] border bg-card shadow-[0_30px_80px_-60px_rgba(0,0,0,0.65)]">
                   <img
                       src={heroImg}
-                      alt={t("Falaise d’Aval、Porte d’Aval 与 L’Aiguille")}
+                      alt={t("Falaise d'Aval、Porte d'Aval 与 L'Aiguille")}
                       className="h-[380px] w-full object-cover sm:h-[520px]"
                       loading="eager"
                   />
@@ -248,9 +247,9 @@ export default function Home({ targetSection }: HomeProps) {
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <div className="flex items-center justify-between gap-3">
                       <div className="text-white">
-                        <div className="text-xs tracking-[0.22em] uppercase opacity-80">Photo</div>
+                        <div className="text-xs tracking-[0.22em] uppercase opacity-80">{t("照片")}</div>
                         <div className="text-lg" style={{ fontFamily: "Cormorant Garamond" }}>
-                          Porte d’Aval / Étretat
+                          {t("Porte d'Aval / Étretat")}
                         </div>
                       </div>
                       <Badge className="rounded-full bg-white/90 text-foreground hover:bg-white/90">
@@ -267,9 +266,9 @@ export default function Home({ targetSection }: HomeProps) {
         <section id="overview" className="scroll-mt-24">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
-                kicker="overview"
-                title={t("为什么这里最‘像Étretat’")}
-                desc={t("一眼识别的拱门轮廓 + 近距离可触达的海蚀地形，让 Falaise d’Aval 成为经典观景点。")}
+                kicker={t("概览")}
+                title={t("为什么这里最'像Étretat'")}
+                desc={t("一眼识别的拱门轮廓 + 近距离可触达的海蚀地形，让 Falaise d'Aval 成为经典观景点。")}
               />
 
             <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -277,7 +276,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
-                      Porte d’Aval
+                      {t("Porte d'Aval")}
                     </div>
                     <p className="mt-2 text-sm text-muted-foreground">{t("海蚀拱门像一座天然「门洞」，在不同光线下呈现完全不同的层次。")}</p>
                   </div>
@@ -289,7 +288,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
-                      L’Aiguille
+                      {t("L'Aiguille")}
                     </div>
                     <p className="mt-2 text-sm text-muted-foreground">{t("「针状岩」立在海中，是摄影构图里的稳定锚点：广角看尺度，长焦看纹理。")}</p>
                   </div>
@@ -315,7 +314,7 @@ export default function Home({ targetSection }: HomeProps) {
         <section id="photos" className="scroll-mt-24 border-y bg-card/35">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
-                kicker="photos"
+                kicker={t("照片")}
                 title={t("照片")}
               />
 
@@ -333,7 +332,7 @@ export default function Home({ targetSection }: HomeProps) {
                         />
                         <div className="p-4">
                           <div className="text-sm font-medium">{item.alt}</div>
-                          <div className="mt-1 text-xs text-muted-foreground">Photo · Unsplash</div>
+                          <div className="mt-1 text-xs text-muted-foreground">{t("照片")} · Unsplash</div>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -349,14 +348,14 @@ export default function Home({ targetSection }: HomeProps) {
         <section id="tips" className="scroll-mt-24">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
-                kicker="visiting tips"
+                kicker={t("玩法")}
                 title={t("怎么逛更舒服")}
-                desc={t("这里的关键不是‘走多远’，而是‘什么时候走’：低潮窗口 + 回撤余量。")}
+                desc={t("这里的关键不是'走多远'，而是'什么时候走'：低潮窗口 + 回撤余量。")}
               />
 
             <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.1fr]">
               <Card className="hairline rounded-2xl p-6">
-                <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Quick plan</div>
+                <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">{t("快速计划")}</div>
                 <h3 className="mt-2 text-2xl leading-tight">{t("半日路线（不赶）")}</h3>
                 <Separator className="my-5" />
                 <ol className="space-y-4 text-sm">
@@ -365,7 +364,7 @@ export default function Home({ targetSection }: HomeProps) {
                       1
                     </div>
                     <div>
-                      <div className="font-medium">{t("海滩侧先取一个‘远景点’")}</div>
+                      <div className="font-medium">{t("海滩侧先取一个'远景点'")}</div>
                       <div className="text-muted-foreground mt-1">{t("先用远景确定拱门、针状岩、浪线关系，再决定是否近距离探索。")}</div>
                     </div>
                   </li>
@@ -375,7 +374,7 @@ export default function Home({ targetSection }: HomeProps) {
                     </div>
                     <div>
                       <div className="font-medium">{t("低潮窗口进入礁滩（可选）")}</div>
-                      <div className="text-muted-foreground mt-1">{t("只在你确定潮汐与退路时进入；不要把‘拍到’建立在‘赌一把’上。")}</div>
+                      <div className="text-muted-foreground mt-1">{t("只在你确定潮汐与退路时进入；不要把'拍到'建立在'赌一把'上。")}</div>
                     </div>
                   </li>
                   <li className="flex gap-3">
@@ -394,7 +393,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <Card className="hairline rounded-2xl p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Safety</div>
+                      <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">{t("安全")}</div>
                       <h3 className="mt-2 text-2xl leading-tight">{t("潮汐提醒")}</h3>
                       <p className="mt-2 text-sm text-muted-foreground">{t("谷地/礁滩区域一旦涨潮，很容易被海水「切断」回程。最稳妥：")}<span className="font-medium text-foreground">{t("只在低潮窗口进入")}</span>{t("，并预留至少 1 小时回撤。")}</p>
                     </div>
@@ -405,7 +404,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <Card className="hairline rounded-2xl p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Footing</div>
+                      <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">{t("地形")}</div>
                       <h3 className="mt-2 text-2xl leading-tight">{t("鞋子与步行")}</h3>
                       <p className="mt-2 text-sm text-muted-foreground">{t("鹅卵石路面更费力且更滑，建议穿防滑鞋；摄影党最好带长焦与防风外套。")}</p>
                     </div>
@@ -420,8 +419,8 @@ export default function Home({ targetSection }: HomeProps) {
         <section id="comparison" className="scroll-mt-24 border-t bg-card/10">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
-              kicker="comparison"
-              title={t("Plage d’Étretat 与 Falaise d'Aval 景点对比")}
+              kicker={t("对比")}
+              title={t("Plage d'Étretat 与 Falaise d'Aval 景点对比")}
               desc={t("游玩指南")}
             />
             <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -436,7 +435,7 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <h3 className="text-xl font-semibold mb-4">{t("不同点")}</h3>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                  <li>{t("Plage d’Étretat 主要是指宽阔的公共鹅卵石海滩，更适合休闲、听浪和观看全景。")}</li>
+                  <li>{t("Plage d'Étretat 主要是指宽阔的公共鹅卵石海滩，更适合休闲、听浪和观看全景。")}</li>
                   <li>{t("Falaise d'Aval 侧重于南侧的悬崖，著名的拱门（Porte d'Aval）和针状岩（L'Aiguille），更具戏剧性和探险感。")}</li>
                   <li>{t("Falaise d'Aval 提供了悬崖顶部的徒步步道，可以从高处俯瞰海湾，而海滩主要在底部。")}</li>
                 </ul>
@@ -459,7 +458,7 @@ export default function Home({ targetSection }: HomeProps) {
         <section id="reviews" className="scroll-mt-24 border-t bg-card/35">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
-              kicker="reviews"
+              kicker={t("评价")}
               title={t("真实游客评价")}
             />
 
@@ -526,7 +525,7 @@ export default function Home({ targetSection }: HomeProps) {
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionTitle
-                kicker="map"
+                kicker={t("地图")}
                 title={t("地图")}
               />
               <Button asChild variant="outline" className="w-fit">
@@ -576,7 +575,7 @@ export default function Home({ targetSection }: HomeProps) {
 
         <section id="sources" className="scroll-mt-24">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-            <SectionTitle kicker="sources" title={t("数据与引用")} desc={t("为了保持信息可信，我们只引用可公开访问的页面。")} />
+            <SectionTitle kicker={t("数据与引用")} title={t("数据与引用")} desc={t("为了保持信息可信，我们只引用可公开访问的页面。")} />
 
             <div className="mt-8 grid gap-4">
               <Card className="hairline rounded-2xl p-6">
@@ -592,18 +591,7 @@ export default function Home({ targetSection }: HomeProps) {
                 </div>
               </Card>
 
-              <Card className="hairline rounded-2xl p-6">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div>
-                    <div className="text-sm font-medium">{t("参考站点：plagedetretat.com")}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{t("版式节奏与栏目结构参考（非内容复制）")}</div>
-                  </div>
-                  <Button asChild variant="outline" size="sm">
-                    <a href="https://www.plagedetretat.com/" target="_blank" rel="noreferrer">{t("打开")}<ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              </Card>
+
             </div>
           </div>
         </section>
