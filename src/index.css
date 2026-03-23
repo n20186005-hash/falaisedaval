@@ -173,3 +173,23 @@
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
 }
+
+/* Hiding Google Maps attribution may violate Google Terms of Service.
+   Use at your own risk. Consider keeping it visible or switching to OpenStreetMap. */
+.google-maps-attribution iframe ~ div,
+.google-maps-attribution .gm-style-cc,
+.google-maps-attribution .gmnoprint,
+.google-maps-attribution a[href*="maps.google.com"],
+.google-maps-attribution a[href*="maps.app.goo.gl"],
+.google-maps-attribution . Attribution,
+iframe[src*="google.com/maps"] + div,
+iframe[src*="google.com/maps"] ~ div {
+  opacity: 0.3 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease;
+}
+.google-maps-attribution:hover iframe ~ div,
+.google-maps-attribution:hover .gm-style-cc,
+.google-maps-attribution:hover .gmnoprint {
+  opacity: 0.6 !important;
+}
