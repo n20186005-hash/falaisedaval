@@ -194,7 +194,7 @@ export default function Home({ targetSection }: HomeProps) {
                 </h1>
 
                 <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-                  {t("Falaise d’Aval 是 Étretat 最具辨识度的海崖段之一：白垩悬崖被海水雕刻出巨大的天然拱门（Porte d’Aval），旁侧可见“针状岩”（L’Aiguille）。低潮时更靠近礁滩与洞穴区域，但涨潮速度快——请把潮汐当作第一条规则。")}
+                  {t("Falaise d'Aval 是 Étretat 最具辨识度的海崖段之一：白垩悬崖被海水雕刻出巨大的天然拱门（Porte d'Aval），旁侧可见「针状岩」（L'Aiguille）。低潮时更靠近礁滩与洞穴区域，但涨潮速度快——请把潮汐当作第一条规则。")}
                 </p>
 
                 <div className="mt-7 flex flex-wrap gap-3">
@@ -279,7 +279,7 @@ export default function Home({ targetSection }: HomeProps) {
                     <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
                       Porte d’Aval
                     </div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t("海蚀拱门像一座天然“门洞”，在不同光线下呈现完全不同的层次。")}</p>
+                    <p className="mt-2 text-sm text-muted-foreground">{t("海蚀拱门像一座天然「门洞」，在不同光线下呈现完全不同的层次。")}</p>
                   </div>
                   <Camera className="h-5 w-5 text-muted-foreground" />
                 </div>
@@ -291,7 +291,7 @@ export default function Home({ targetSection }: HomeProps) {
                     <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
                       L’Aiguille
                     </div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t("“针状岩”立在海中，是摄影构图里的稳定锚点：广角看尺度，长焦看纹理。")}</p>
+                    <p className="mt-2 text-sm text-muted-foreground">{t("「针状岩」立在海中，是摄影构图里的稳定锚点：广角看尺度，长焦看纹理。")}</p>
                   </div>
                   <Waves className="h-5 w-5 text-muted-foreground" />
                 </div>
@@ -396,7 +396,7 @@ export default function Home({ targetSection }: HomeProps) {
                     <div>
                       <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Safety</div>
                       <h3 className="mt-2 text-2xl leading-tight">{t("潮汐提醒")}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{t("谷地/礁滩区域一旦涨潮，很容易被海水“切断”回程。最稳妥：")}<span className="font-medium text-foreground">{t("只在低潮窗口进入")}</span>{t("，并预留至少 1 小时回撤。")}</p>
+                      <p className="mt-2 text-sm text-muted-foreground">{t("谷地/礁滩区域一旦涨潮，很容易被海水「切断」回程。最稳妥：")}<span className="font-medium text-foreground">{t("只在低潮窗口进入")}</span>{t("，并预留至少 1 小时回撤。")}</p>
                     </div>
                     <ShieldAlert className="h-5 w-5 text-muted-foreground" />
                   </div>
@@ -516,7 +516,7 @@ export default function Home({ targetSection }: HomeProps) {
                 className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
               >
                 <ExternalLink className="h-4 w-4" />
-                {t("查看更多 Google Maps 評價")} / Voir plus d'avis sur Google Maps
+                {t("查看更多 Google Maps 評價")}
               </a>
             </div>
           </div>
@@ -563,7 +563,7 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Best light</div>
                 <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t("日落前后")}</div>
-                <p className="mt-2 text-sm text-muted-foreground">{t("逆光或侧逆光会强调悬崖纹理；阴天则更适合拍“冷色电影感”。")}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{t("逆光或侧逆光会强调悬崖纹理；阴天则更适合拍「冷色电影感」。")}</p>
               </Card>
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Mini rule</div>
