@@ -36,6 +36,25 @@ const resources = {
       "評價 - 遊客怎麼說": "Avis - Ce que disent les visiteurs",
       "來自親身體驗 Étretat 海灘的 Google Maps 旅客的真實評價。": "Avis authentiques de visiteurs sur Google Maps ayant expérimenté la plage d'Étretat.",
       "評分與評論數據來源於 Google Maps（最後更新：2026 年）。我們僅展示部分經核實的高分評價。如需查看完整最新評論，請點擊下方鏈接。": "Les notes et les avis proviennent de Google Maps (Dernière mise à jour : 2026). Nous ne présentons qu'une sélection d'avis positifs vérifiés. Pour voir tous les avis récents, cliquez sur le lien ci-dessous.",
+      "本地嚮導": "Guide local",
+      "1 個月前": "Il y a 1 mois",
+      "這絕對是諾曼第最壯觀的海岸線。白色的白堊懸崖（Porte d'Aval）和針岩（L'Aiguille）令人驚嘆。記得穿適合在鵝卵石上行走的鞋子，而且一定要在退潮時去探索那些隱藏的洞穴。": "C'est sans doute le littoral le plus spectaculaire de Normandie. Les falaises de craie blanche (Porte d'Aval) et l'Aiguille sont incroyables. Prévoyez des chaussures adaptées pour marcher sur les galets et explorez les grottes cachées à marée basse.",
+      "攝影師": "Photographe",
+      "2 個月前": "Il y a 2 mois",
+      "日落時分的景色無與倫比！當陽光將白色的懸崖染成金色時，整個海灘就像一幅油畫。強烈建議爬上 Amont 懸崖的步道，從高處俯瞰整個 Étretat 海灣的弧線。": "La vue au coucher du soleil est inégalée ! Quand le soleil dore les falaises blanches, toute la plage ressemble à une peinture à l'huile. Je recommande vivement de monter le sentier de la falaise d'Amont pour avoir une vue panoramique sur toute la baie d'Étretat.",
+      "旅客": "Voyageur",
+      "3 週前": "Il y a 3 semaines",
+      "鵝卵石海灘很特別，聽著海浪退去時石頭滾動的『嘩啦』聲非常療癒。這裡風很大，即使在夏天也建議帶件薄外套。停車有點困難，最好早點到或停在外圍。": "La plage de galets est très spéciale, écouter le bruit des pierres qui roulent quand la vague se retire est très apaisant. Il y a beaucoup de vent ici, même en été il est conseillé d'apporter une veste légère. Le stationnement est un peu difficile, il vaut mieux arriver tôt ou se garer à l'extérieur.",
+      "遊客": "Touriste",
+      "Magnifique ! Les falaises de craie blanche sont à couper le souffle. La Porte d'Aval et l'Aiguille créent un paysage unique au monde. Pensez à venir à marée basse pour explorer les grottes.": "Magnifique ! Les falaises de craie blanche sont à couper le souffle. La Porte d'Aval et l'Aiguille créent un paysage unique au monde. Pensez à venir à marée basse pour explorer les grottes.",
+      "本地居民": "Résident local",
+      "作為諾曼第居民，我每季都來這裡。秋天的懸崖在晨霧中若隱若現，猶如仙境。千萬別錯過從懸崖頂俯瞰的視角——那是我見過最美的風景之一。": "En tant que résident normand, je viens ici à chaque saison. Les falaises d'automne, à moitié cachées dans la brume matinale, ressemblent à un pays des fées. Ne manquez pas la vue depuis le sommet de la falaise — c'est l'un des plus beaux paysages que j'aie jamais vus.",
+      "自助旅行者": "Voyageur indépendant",
+      "One of the most beautiful coastal walks I've ever done. The white chalk cliffs against the deep blue English Channel is a sight I'll never forget. Arrive early to avoid the tour buses!": "L'une des plus belles promenades côtières que j'aie jamais faites. Les falaises de craie blanche contre la Manche d'un bleu profond est un spectacle que je n'oublierai jamais. Arrivez tôt pour éviter les bus touristiques !",
+      "地質愛好者": "Passionné de géologie",
+      "L'érosion marine a créé des formes spectaculaires ici — l'arche naturelle de la Porte d'Aval est un chef-d'œuvre géologique. Fascinant pour les passionnés de géologie comme moi !": "L'érosion marine a créé des formes spectaculaires ici — l'arche naturelle de la Porte d'Aval est un chef-d'œuvre géologique. Fascinant pour les passionnés de géologie comme moi !",
+      "背包客": "Routard",
+      "從巴黎坐火車來一日遊非常方便。鵝卵石沙灘和壯觀的白堊懸崖形成強烈對比。夕陽時分光線特別美，難怪印象派畫家都來這裡找靈感。": "C'est très pratique de venir de Paris en train pour une excursion d'une journée. La plage de galets et les spectaculaires falaises de craie forment un contraste saisissant. La lumière au coucher du soleil est particulièrement belle, il n'est pas étonnant que les peintres impressionnistes soient venus ici pour trouver l'inspiration.",
       "隐私政策": "Politique de confidentialité",
       "服务条款": "Conditions d'utilisation",
       "Cookie 设置": "Paramètres des cookies",
@@ -168,7 +187,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    lng: localStorage.getItem('i18nextLng') || 'fr', // 强制默认语言为 fr（除非有本地缓存）
     fallbackLng: 'fr',
+    supportedLngs: ['fr', 'en', 'zh-Hant', 'de'],
+    detection: {
+      order: ['localStorage'], // 仅依赖本地存储，不再自动探测浏览器语言
+      caches: ['localStorage'],
+    },
     interpolation: {
       escapeValue: false, 
     }

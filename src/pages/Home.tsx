@@ -69,6 +69,13 @@ export default function Home({ targetSection }: HomeProps) {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
 
+  const handleLanguageChange = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('i18nextLng', lng);
+    // 强制刷新以确保所有写死的或未被 t() 包裹的深度组件完全重新渲染
+    window.location.reload();
+  };
+
   useEffect(() => {
     if (targetSection) {
       document.getElementById(targetSection)?.scrollIntoView({ behavior: "smooth" });
@@ -128,16 +135,16 @@ export default function Home({ targetSection }: HomeProps) {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={() => i18n.changeLanguage('fr')}>
+                  <DropdownMenuItem onClick={() => handleLanguageChange('fr')}>
                     Français
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => i18n.changeLanguage('en')}>
+                  <DropdownMenuItem onClick={() => handleLanguageChange('en')}>
                     English
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => i18n.changeLanguage('zh-Hant')}>
+                  <DropdownMenuItem onClick={() => handleLanguageChange('zh-Hant')}>
                     繁體中文
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => i18n.changeLanguage('de')}>
+                  <DropdownMenuItem onClick={() => handleLanguageChange('de')}>
                     Deutsch
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -483,14 +490,14 @@ export default function Home({ targetSection }: HomeProps) {
 
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
-                { name: "Jean-Pierre", role: "本地嚮導", date: "1 個月前", content: "這絕對是諾曼第最壯觀的海岸線。白色的白堊懸崖（Porte d'Aval）和針岩（L'Aiguille）令人驚嘆。記得穿適合在鵝卵石上行走的鞋子，而且一定要在退潮時去探索那些隱藏的洞穴。" },
-                { name: "Sarah Jenkins", role: "攝影師", date: "2 個月前", content: "日落時分的景色無與倫比！當陽光將白色的懸崖染成金色時，整個海灘就像一幅油畫。強烈建議爬上 Amont 懸崖的步道，從高處俯瞰整個 Étretat 海灣的弧線。" },
-                { name: "Thomas M.", role: "旅客", date: "3 週前", content: "鵝卵石海灘很特別，聽著海浪退去時石頭滾動的『嘩啦』聲非常療癒。這裡風很大，即使在夏天也建議帶件薄外套。停車有點困難，最好早點到或停在外圍。" },
-                { name: "Marie L.", role: "遊客", date: "2025-11", content: "Magnifique ! Les falaises de craie blanche sont à couper le souffle. La Porte d'Aval et l'Aiguille créent un paysage unique au monde. Pensez à venir à marée basse pour explorer les grottes." },
-                { name: "Pierre D.", role: "本地居民", date: "2025-09", content: "，作為諾曼第居民，我每季都來這裡。秋天的懸崖在晨霧中若隱若現，猶如仙境。千萬別錯過從懸崖頂俯瞰的視角——那是我見過最美的風景之一。" },
-                { name: "Emma R.", role: "自助旅行者", date: "2025-10", content: "One of the most beautiful coastal walks I've ever done. The white chalk cliffs against the deep blue English Channel is a sight I'll never forget. Arrive early to avoid the tour buses!" },
-                { name: "Lucas B.", role: "地質愛好者", date: "2025-08", content: "L'érosion marine a créé des formes spectaculaires ici — l'arche naturelle de la Porte d'Aval est un chef-d'œuvre géologique. Fascinant pour les passionnés de géologie comme moi !" },
-                { name: "Sophie Chen", role: "背包客", date: "2025-07", content: "從巴黎坐火車來一日遊非常方便。鵝卵石沙灘和壯觀的白堊懸崖形成強烈對比。夕陽時分光線特別美，難怪印象派畫家都來這裡找靈感。" },
+                { name: "Jean-Pierre", role: t("本地嚮導"), date: t("1 個月前"), content: t("這絕對是諾曼第最壯觀的海岸線。白色的白堊懸崖（Porte d'Aval）和針岩（L'Aiguille）令人驚嘆。記得穿適合在鵝卵石上行走的鞋子，而且一定要在退潮時去探索那些隱藏的洞穴。") },
+                { name: "Sarah Jenkins", role: t("攝影師"), date: t("2 個月前"), content: t("日落時分的景色無與倫比！當陽光將白色的懸崖染成金色時，整個海灘就像一幅油畫。強烈建議爬上 Amont 懸崖的步道，從高處俯瞰整個 Étretat 海灣的弧線。") },
+                { name: "Thomas M.", role: t("旅客"), date: t("3 週前"), content: t("鵝卵石海灘很特別，聽著海浪退去時石頭滾動的『嘩啦』聲非常療癒。這裡風很大，即使在夏天也建議帶件薄外套。停車有點困難，最好早點到或停在外圍。") },
+                { name: "Marie L.", role: t("遊客"), date: "2025-11", content: t("Magnifique ! Les falaises de craie blanche sont à couper le souffle. La Porte d'Aval et l'Aiguille créent un paysage unique au monde. Pensez à venir à marée basse pour explorer les grottes.") },
+                { name: "Pierre D.", role: t("本地居民"), date: "2025-09", content: t("作為諾曼第居民，我每季都來這裡。秋天的懸崖在晨霧中若隱若現，猶如仙境。千萬別錯過從懸崖頂俯瞰的視角——那是我見過最美的風景之一。") },
+                { name: "Emma R.", role: t("自助旅行者"), date: "2025-10", content: t("One of the most beautiful coastal walks I've ever done. The white chalk cliffs against the deep blue English Channel is a sight I'll never forget. Arrive early to avoid the tour buses!") },
+                { name: "Lucas B.", role: t("地質愛好者"), date: "2025-08", content: t("L'érosion marine a créé des formes spectaculaires ici — l'arche naturelle de la Porte d'Aval est un chef-d'œuvre géologique. Fascinant pour les passionnés de géologie comme moi !") },
+                { name: "Sophie Chen", role: t("背包客"), date: "2025-07", content: t("從巴黎坐火車來一日遊非常方便。鵝卵石沙灘和壯觀的白堊懸崖形成強烈對比。夕陽時分光線特別美，難怪印象派畫家都來這裡找靈感。") },
               ].map((review, i) => (
                 <Card key={i} className="hairline rounded-2xl p-6 flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
