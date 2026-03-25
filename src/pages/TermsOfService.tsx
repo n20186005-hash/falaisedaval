@@ -32,6 +32,13 @@ export default function TermsOfService() {
         </div>
 
         <div className="prose prose-neutral dark:prose-invert max-w-none">
+          <section className="mb-8 p-5 bg-muted/30 rounded-xl border-l-4 border-yellow-500">
+            <h2 className="text-2xl font-medium mb-4">{t("免责声明（Disclaimer）")}</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              {t("本网站是一个独立的第三方旅游资讯指南，旨在为游客提供客观的历史背景与游览建议，与 Falaise d'Aval 的官方管理机构无关。如需购买官方门票或获取官方通告，请访问官方渠道。")}
+            </p>
+          </section>
+
           <section className="mb-8">
             <h2 className="text-2xl font-medium mb-4">{t("1. 接受条款")}</h2>
             <p className="text-muted-foreground leading-relaxed">

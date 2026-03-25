@@ -581,6 +581,15 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
+                    <div className="text-sm font-medium">{t("信息提取自公共资源")}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{t("结合了诺曼底当地旅游局、维基百科以及谷歌地图的基本信息。")}</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="hairline rounded-2xl p-6">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
                     <div className="text-sm font-medium">{t("Google Maps（地点基础信息）")}</div>
                     <div className="mt-1 text-xs text-muted-foreground">{t("评分、开放时间、Plus Code、简介等（可能随时间变化）")}</div>
                   </div>
@@ -590,14 +599,18 @@ export default function Home({ targetSection }: HomeProps) {
                   </Button>
                 </div>
               </Card>
-
-
             </div>
           </div>
         </section>
 
         <footer className="border-t">
           <div className="mx-auto max-w-6xl px-4 py-8">
+            <div className="mb-8 p-5 bg-muted/30 rounded-xl border-l-4 border-yellow-500">
+              <h4 className="font-semibold text-sm mb-2">{t("免责声明（Disclaimer）")}</h4>
+              <p className="text-sm text-muted-foreground">
+                {t("本网站是一个独立的第三方旅游资讯指南，旨在为游客提供客观的历史背景与游览建议，与 Falaise d'Aval 的官方管理机构无关。如需购买官方门票或获取官方通告，请访问官方渠道。")}
+              </p>
+            </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-sm text-muted-foreground">
               <div>
                 <p>{t("如需本网站的技术支持，请联系：claritleonelmnicol@gmail.com")}</p>
