@@ -2,12 +2,17 @@ import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function TermsOfService() {
   const { t } = useTranslation();
 
   return (
     <div className="relative min-h-screen bg-background text-foreground pb-16">
+      <SEOHead 
+        title={`Falaise d'Aval | ${t("服务条款")}`}
+        pagePath="/terms-of-service"
+      />
       <div className="grain absolute inset-0 -z-10" />
 
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/55">

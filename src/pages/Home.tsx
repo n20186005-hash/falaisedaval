@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
+import { SEOHead } from "@/components/SEOHead";
 import {
   ArrowUpRight,
   Compass,
@@ -93,6 +94,10 @@ export default function Home({ targetSection }: HomeProps) {
 
   return (
     <div className="relative min-h-screen bg-background text-foreground">
+      <SEOHead 
+        title={`Falaise d'Aval | ${t("概览")}`}
+        pagePath=""
+      />
       <div className="grain absolute inset-0 -z-10" />
 
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/55">
