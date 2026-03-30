@@ -2,6 +2,25 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// Custom path language detector
+const customPathDetector = {
+  name: 'customPath',
+  lookup(options: any) {
+    let found: string | undefined = undefined;
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname;
+      if (path.startsWith('/en/') || path === '/en') found = 'en';
+      else if (path.startsWith('/de/') || path === '/de') found = 'de';
+      else if (path.startsWith('/zh-hant/') || path === '/zh-hant') found = 'zh-Hant';
+      // French is default, no prefix means either fr or fallback to localStorage
+    }
+    return found;
+  }
+};
+
+const languageDetector = new LanguageDetector();
+languageDetector.addDetector(customPathDetector);
+
 const resources = {
   fr: {
     translation: {
@@ -486,15 +505,14 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector)
+  .use(languageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    lng: localStorage.getItem('i18nextLng') || 'fr',
     fallbackLng: 'fr',
     supportedLngs: ['fr', 'en', 'zh-Hant', 'de'],
     detection: {
-      order: ['localStorage'],
+      order: ['customPath', 'localStorage', 'navigator'],
       caches: ['localStorage'],
     },
     interpolation: {

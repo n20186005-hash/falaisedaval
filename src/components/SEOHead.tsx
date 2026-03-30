@@ -31,7 +31,13 @@ export function SEOHead({ title, description, pagePath = '' }: SEOHeadProps) {
   const config = langConfig[currentLang] || langConfig['fr'];
 
   // Construct current canonical URL
-  const canonicalUrl = `${SITE_URL}${config.prefix}${normalizedPath}`;
+  let canonicalUrl = `${SITE_URL}${config.prefix}${normalizedPath}`;
+  if (canonicalUrl === SITE_URL) {
+    canonicalUrl = `${SITE_URL}/`;
+  }
+
+  // Helper to ensure root URL has trailing slash
+  const formatUrl = (path: string) => path === SITE_URL ? `${SITE_URL}/` : path;
 
   // Default values from translation if not provided
   const metaTitle = title || "Falaise d'Aval | " + t("概览");
@@ -48,13 +54,13 @@ export function SEOHead({ title, description, pagePath = '' }: SEOHeadProps) {
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Hreflang Tags (Bidirectional) */}
-      <link rel="alternate" hrefLang="fr" href={`${SITE_URL}${normalizedPath}`} />
-      <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en${normalizedPath}`} />
-      <link rel="alternate" hrefLang="de" href={`${SITE_URL}/de${normalizedPath}`} />
-      <link rel="alternate" hrefLang="zh-Hant" href={`${SITE_URL}/zh-hant${normalizedPath}`} />
+      <link rel="alternate" hrefLang="fr" href={formatUrl(`${SITE_URL}${normalizedPath}`)} />
+      <link rel="alternate" hrefLang="en" href={formatUrl(`${SITE_URL}/en${normalizedPath}`)} />
+      <link rel="alternate" hrefLang="de" href={formatUrl(`${SITE_URL}/de${normalizedPath}`)} />
+      <link rel="alternate" hrefLang="zh-Hant" href={formatUrl(`${SITE_URL}/zh-hant${normalizedPath}`)} />
       
       {/* x-default tag (Fallback language, typically English or the primary language) */}
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${normalizedPath}`} />
+      <link rel="alternate" hrefLang="x-default" href={formatUrl(`${SITE_URL}${normalizedPath}`)} />
     </Helmet>
   );
 }

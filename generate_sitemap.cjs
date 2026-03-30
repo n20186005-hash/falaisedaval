@@ -28,9 +28,10 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
 pages.forEach(page => {
   langs.forEach(lang => {
     const pageUrl = `${baseUrl}${lang.prefix}${page}`;
+    const formatUrl = (url) => url === baseUrl ? `${baseUrl}/` : url;
     
     xml += `  <url>\n`;
-    xml += `    <loc>${pageUrl || baseUrl + '/'}</loc>\n`;
+    xml += `    <loc>${formatUrl(pageUrl)}</loc>\n`;
     xml += `    <lastmod>${today}</lastmod>\n`;
     xml += `    <changefreq>weekly</changefreq>\n`;
     xml += `    <priority>${page === '' ? '1.0' : '0.8'}</priority>\n`;
@@ -38,12 +39,12 @@ pages.forEach(page => {
     // 为当前 URL 添加指向所有语言版本（包括它自己）的 hreflang 标签
     langs.forEach(altLang => {
       const altUrl = `${baseUrl}${altLang.prefix}${page}`;
-      xml += `    <xhtml:link rel="alternate" hreflang="${altLang.code}" href="${altUrl || baseUrl + '/'}" />\n`;
+      xml += `    <xhtml:link rel="alternate" hreflang="${altLang.code}" href="${formatUrl(altUrl)}" />\n`;
     });
     
     // 强制添加 x-default 指向默认语言（法语版）
     const defaultUrl = `${baseUrl}${page}`;
-    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultUrl || baseUrl + '/'}" />\n`;
+    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${formatUrl(defaultUrl)}" />\n`;
     
     xml += `  </url>\n`;
   });

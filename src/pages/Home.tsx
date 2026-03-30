@@ -72,8 +72,30 @@ export default function Home({ targetSection }: HomeProps) {
   const handleLanguageChange = (lng: string) => {
     i18n.changeLanguage(lng);
     localStorage.setItem('i18nextLng', lng);
-    // 强制刷新以确保所有写死的或未被 t() 包裹的深度组件完全重新渲染
-    window.location.reload();
+    
+    // Create mapping for URL prefixes
+    const prefixMap: Record<string, string> = {
+      'fr': '',
+      'en': '/en',
+      'de': '/de',
+      'zh-Hant': '/zh-hant'
+    };
+    
+    const newPrefix = prefixMap[lng] || '';
+    
+    // Get current path without language prefix
+    let currentPath = window.location.pathname;
+    const langPrefixes = ['/en', '/de', '/zh-hant'];
+    for (const prefix of langPrefixes) {
+      if (currentPath === prefix || currentPath.startsWith(`${prefix}/`)) {
+        currentPath = currentPath.slice(prefix.length) || '/';
+        break;
+      }
+    }
+    
+    // Redirect to the new URL with the correct language prefix
+    const newUrl = `${newPrefix}${currentPath === '/' ? '' : currentPath}`;
+    window.location.href = newUrl || '/';
   };
 
   useEffect(() => {
