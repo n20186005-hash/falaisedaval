@@ -49,6 +49,10 @@ import {
 import {
   buildAbsoluteUrl,
   GOOGLE_MAPS_URL,
+  PLACE_CATEGORY,
+  PLACE_LOCALITY,
+  PLACE_NAME,
+  PLACE_PLUS_CODE,
   REVIEW_COUNT,
   REVIEW_RATING,
   resolveSiteLanguage,
@@ -162,7 +166,7 @@ export default function Home({ targetSection }: HomeProps) {
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Falaise d'Aval",
+      name: PLACE_NAME,
       url: `${SITE_URL}/`,
       inLanguage: "fr-FR",
     },
@@ -174,20 +178,24 @@ export default function Home({ targetSection }: HomeProps) {
       url: buildAbsoluteUrl("/", "fr"),
       about: {
         "@type": "TouristAttraction",
-        name: "Falaise d'Aval",
+        name: PLACE_NAME,
+        sameAs: GOOGLE_MAPS_URL,
       },
     },
     {
       "@context": "https://schema.org",
       "@type": "TouristAttraction",
-      name: "Falaise d'Aval",
+      name: PLACE_NAME,
       description:
         "Falaises de craie, Porte d'Aval et L'Aiguille à Étretat, en Normandie.",
       url: buildAbsoluteUrl("/", "fr"),
       image: new URL(heroImg, SITE_URL).toString(),
+      sameAs: GOOGLE_MAPS_URL,
+      additionalType: PLACE_CATEGORY,
+      identifier: PLACE_PLUS_CODE,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Étretat",
+        addressLocality: PLACE_LOCALITY,
         addressRegion: "Normandie",
         addressCountry: "FR",
       },

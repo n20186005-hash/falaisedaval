@@ -1,5 +1,10 @@
 export const SITE_URL = "https://www.falaisedaval.com";
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8";
+export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/9PbnpZHawCuUewXF8";
+export const PLACE_NAME = "Falaise d'Aval";
+export const PLACE_CATEGORY = "Scenic spot";
+export const PLACE_LOCALITY = "Étretat";
+export const PLACE_LOCATION = "Étretat, France";
+export const PLACE_PLUS_CODE = "P54V+WC Étretat, France";
 export const REVIEW_RATING = "4.8";
 export const REVIEW_COUNT = "17,569";
 
