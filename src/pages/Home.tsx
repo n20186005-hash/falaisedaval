@@ -46,6 +46,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  buildAbsoluteUrl,
+  GOOGLE_MAPS_URL,
+  REVIEW_COUNT,
+  REVIEW_RATING,
+  resolveSiteLanguage,
+  SITE_URL,
+} from "@/lib/site";
 
 interface HomeProps {
   targetSection?: string;
@@ -68,6 +76,123 @@ function SectionTitle(props: { kicker: string; title: string; desc?: string }) {
 export default function Home({ targetSection }: HomeProps) {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
+  const locale = resolveSiteLanguage(i18n.language) === "en" ? "en" : "fr";
+
+  const seoCopy = {
+    fr: {
+      title: "Falaise d'Aval à Étretat : accès, sentier & conseils de visite",
+      description:
+        "Découvrez la Falaise d'Aval à Étretat : Porte d'Aval, Aiguille, sentier panoramique, accès, points de vue et conseils pratiques pour préparer votre visite.",
+      heroTitle: "Falaise d'Aval à Étretat : guide de visite",
+      heroBody:
+        "La Falaise d'Aval à Étretat est le point de vue le plus recherché de Normandie pour voir la Porte d'Aval, L'Aiguille et le sentier panoramique au-dessus de la Manche. Retrouvez ici l'accès, la carte, les meilleurs points de vue, les conseils photo et les informations essentielles pour visiter sans vous tromper de marée.",
+      heroBadge: "Guide en français",
+      quickTitle: "Préparer votre visite",
+      quickLinks: [
+        {
+          title: "Sentier panoramique de la Falaise d'Aval",
+          description: "Temps de marche, points de vue, vent et sécurité.",
+          href: "/sentier-panoramique-falaise-daval",
+        },
+        {
+          title: "Falaise d'Amont ou Falaise d'Aval",
+          description: "Le comparatif le plus utile pour choisir votre parcours.",
+          href: "/falaise-damont-ou-daval",
+        },
+        {
+          title: "Photos de la Falaise d'Aval",
+          description: "Repérez les meilleurs cadrages avant de partir.",
+          href: "/photos",
+        },
+        {
+          title: "Carte et accès",
+          description: "Ouvrez Google Maps et préparez votre arrivée.",
+          href: "/map",
+        },
+      ],
+      navTrail: "Sentier",
+      navCompare: "Amont ou Aval",
+      navPhotos: "Photos",
+      navMap: "Carte",
+      primaryCta: "Voir sur Google Maps",
+      secondaryCta: "Voir le sentier",
+    },
+    en: {
+      title: "Falaise d'Aval in Etretat: access, trail and visit tips",
+      description:
+        "Discover Falaise d'Aval in Etretat with Porte d'Aval, the Needle, panoramic trail, access tips, viewpoints and practical advice for your visit.",
+      heroTitle: "Falaise d'Aval in Etretat: visitor guide",
+      heroBody:
+        "Falaise d'Aval in Etretat is the landmark most visitors search for when they want to see Porte d'Aval, L'Aiguille and the panoramic trail above the Channel. Use this guide for access, map links, viewpoints, photo spots and practical visit advice.",
+      heroBadge: "Main visitor guide",
+      quickTitle: "Plan your visit",
+      quickLinks: [
+        {
+          title: "Panoramic trail of Falaise d'Aval",
+          description: "Walking time, viewpoints, wind notes and safety.",
+          href: "/sentier-panoramique-falaise-daval",
+        },
+        {
+          title: "Falaise d'Amont or Falaise d'Aval",
+          description: "A clear comparison to choose the right route.",
+          href: "/falaise-damont-ou-daval",
+        },
+        {
+          title: "Photos of Falaise d'Aval",
+          description: "Preview framing ideas before you arrive.",
+          href: "/photos",
+        },
+        {
+          title: "Map and access",
+          description: "Open Google Maps and prepare your arrival.",
+          href: "/map",
+        },
+      ],
+      navTrail: "Trail",
+      navCompare: "Amont or Aval",
+      navPhotos: "Photos",
+      navMap: "Map",
+      primaryCta: "Open Google Maps",
+      secondaryCta: "Open trail guide",
+    },
+  } as const;
+
+  const content = seoCopy[locale];
+  const homeSchemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Falaise d'Aval",
+      url: `${SITE_URL}/`,
+      inLanguage: "fr-FR",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: content.title,
+      description: content.description,
+      url: buildAbsoluteUrl("/", "fr"),
+      about: {
+        "@type": "TouristAttraction",
+        name: "Falaise d'Aval",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      name: "Falaise d'Aval",
+      description:
+        "Falaises de craie, Porte d'Aval et L'Aiguille à Étretat, en Normandie.",
+      url: buildAbsoluteUrl("/", "fr"),
+      image: new URL(heroImg, SITE_URL).toString(),
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Étretat",
+        addressRegion: "Normandie",
+        addressCountry: "FR",
+      },
+    },
+  ];
 
   const handleLanguageChange = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -117,8 +242,12 @@ export default function Home({ targetSection }: HomeProps) {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
       <SEOHead 
-        title={`Falaise d'Aval | ${t("概览")}`}
+        title={content.title}
+        description={content.description}
         pagePath=""
+        type="website"
+        image={new URL(heroImg, SITE_URL).toString()}
+        schemas={homeSchemas}
       />
       <div className="grain absolute inset-0 -z-10" />
 
@@ -138,17 +267,17 @@ export default function Home({ targetSection }: HomeProps) {
             </div>
 
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <Link className="hover:opacity-70" href="/overview">
-                {t("概览")}
+              <Link className="hover:opacity-70" href="/sentier-panoramique-falaise-daval">
+                {content.navTrail}
+              </Link>
+              <Link className="hover:opacity-70" href="/falaise-damont-ou-daval">
+                {content.navCompare}
               </Link>
               <Link className="hover:opacity-70" href="/photos">
-                {t("照片")}
-              </Link>
-              <Link className="hover:opacity-70" href="/tips">
-                {t("玩法")}
+                {content.navPhotos}
               </Link>
               <Link className="hover:opacity-70" href="/map">
-                {t("地图")}
+                {content.navMap}
               </Link>
             </nav>
 
@@ -183,17 +312,17 @@ export default function Home({ targetSection }: HomeProps) {
 
               <Button asChild variant="outline" className="hidden sm:inline-flex">
                 <a
-                  href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8"
+                  href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {t("打开 Google Maps")} <ArrowUpRight className="ml-2 h-4 w-4" />
+                  {content.primaryCta} <ArrowUpRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button asChild className="md:hidden" size="sm">
-                <a href="#map" onClick={(e) => e.preventDefault()}>
+                <Link href="/map">
                   <MapPinned className="h-4 w-4" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
@@ -211,24 +340,25 @@ export default function Home({ targetSection }: HomeProps) {
                 className="relative"
               >
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="secondary" className="rounded-full">{t("自然景观点")}</Badge>
-                  <Badge variant="secondary" className="rounded-full">{t("评分 4.8/5（Google）")}</Badge>
+                  <Badge variant="secondary" className="rounded-full">{content.heroBadge}</Badge>
+                  <Badge variant="secondary" className="rounded-full">{`Google ${REVIEW_RATING}/5`}</Badge>
                   <Badge variant="secondary" className="rounded-full">{t("24 小时开放")}</Badge>
                 </div>
 
-                <h1 className="mt-5 text-5xl sm:text-6xl leading-[0.9]">{t("面向英吉利海峡的")}<span className="block">{t("纪念碑级拱门")}</span>
-                </h1>
+                <h1 className="mt-5 text-5xl sm:text-6xl leading-[0.95]">{content.heroTitle}</h1>
 
                 <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-                  {t("Falaise d'Aval 是 Étretat 最具辨识度的海崖段之一：白垩悬崖被海水雕刻出巨大的天然拱门（Porte d'Aval），旁侧可见「针状岩」（L'Aiguille）。低潮时更靠近礁滩与洞穴区域，但涨潮速度快——请把潮汐当作第一条规则。")}
+                  {content.heroBody}
                 </p>
 
                 <div className="mt-7 flex flex-wrap gap-3">
                   <Button asChild>
-                    <Link href="/overview">{t("开始了解")}</Link>
+                    <a href={GOOGLE_MAPS_URL} target="_blank" rel="noreferrer">
+                      {content.primaryCta}
+                    </a>
                   </Button>
                   <Button asChild variant="outline">
-                    <Link href="/photos">{t("看照片")}</Link>
+                    <Link href="/sentier-panoramique-falaise-daval">{content.secondaryCta}</Link>
                   </Button>
                 </div>
 
@@ -291,6 +421,19 @@ export default function Home({ targetSection }: HomeProps) {
         </section>
 
         <section id="overview" className="scroll-mt-24">
+          <div className="mx-auto max-w-6xl px-4 pt-2 sm:pt-4">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {content.quickLinks.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <Card className="hairline rounded-2xl p-5 transition-colors hover:bg-card/80">
+                    <div className="text-sm font-medium">{item.title}</div>
+                    <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
                 kicker={t("概览")}
@@ -498,7 +641,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <div className="flex text-yellow-500 text-sm">
                   {'★★★★★'.split('').map((star, j) => <span key={j}>{star}</span>)}
                 </div>
-                <span className="text-sm text-muted-foreground">(21,394 {t("条评价")})</span>
+                <span className="text-sm text-muted-foreground">({REVIEW_COUNT} {t("条评价")})</span>
               </div>
               <p className="text-sm text-muted-foreground mt-3">
                 {t("评分与评论数据来源于 Google Maps（最后更新：2026 年）。我们仅展示部分经核实的高分评价。如需查看完整最新评论，请点击下方链接。")}
@@ -535,8 +678,8 @@ export default function Home({ targetSection }: HomeProps) {
             </div>
 
             <div className="mt-10 text-center">
-              <a
-                href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8"
+                <a
+                  href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
@@ -557,7 +700,7 @@ export default function Home({ targetSection }: HomeProps) {
               />
               <Button asChild variant="outline" className="w-fit">
                 <a
-                  href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8"
+                  href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
                 >{t("在 Google Maps 里规划路线")}<ExternalLink className="ml-2 h-4 w-4" />
@@ -621,7 +764,7 @@ export default function Home({ targetSection }: HomeProps) {
                     <div className="mt-1 text-xs text-muted-foreground">{t("评分、开放时间、Plus Code、简介等（可能随时间变化）")}</div>
                   </div>
                   <Button asChild variant="outline" size="sm">
-                    <a href="https://maps.app.goo.gl/7ZmDoEYUKrHYQgSp8" target="_blank" rel="noreferrer">{t("打开")}<ExternalLink className="ml-2 h-4 w-4" />
+                    <a href={GOOGLE_MAPS_URL} target="_blank" rel="noreferrer">{t("打开")}<ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </div>

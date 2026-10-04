@@ -6,6 +6,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Home from "@/pages/Home";
+import PhotosPage from "@/pages/PhotosPage";
+import SentierPage from "@/pages/SentierPage";
+import AmontAvalPage from "@/pages/AmontAvalPage";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import CookieSettings from "@/pages/CookieSettings";
@@ -45,6 +48,9 @@ function AppRouter() {
   return (
     <Router hook={useLanguageAwareLocation}>
       <Switch>
+        <Route path="/photos" component={PhotosPage} />
+        <Route path="/sentier-panoramique-falaise-daval" component={SentierPage} />
+        <Route path="/falaise-damont-ou-daval" component={AmontAvalPage} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/terms-of-service" component={TermsOfService} />
         <Route path="/cookie-settings" component={CookieSettings} />

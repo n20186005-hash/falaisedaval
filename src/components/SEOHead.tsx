@@ -1,66 +1,75 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'wouter';
-
-// Base URL configuration - change this to your actual production domain
-const SITE_URL = 'https://www.falaisedaval.com';
+import {
+  SITE_URL,
+  buildAbsoluteUrl,
+  getAlternateUrls,
+  languageConfig,
+  normalizePagePath,
+  resolveSiteLanguage,
+} from "@/lib/site";
 
 interface SEOHeadProps {
   title?: string;
   description?: string;
   pagePath?: string; // e.g., '', '/privacy-policy', '/terms-of-service'
+  image?: string;
+  type?: string;
+  schemas?: Array<Record<string, unknown>> | Record<string, unknown>;
 }
 
-export function SEOHead({ title, description, pagePath = '' }: SEOHeadProps) {
+export function SEOHead({
+  title,
+  description,
+  pagePath = '',
+  image,
+  type = 'website',
+  schemas,
+}: SEOHeadProps) {
   const { i18n, t } = useTranslation();
   
-  // Clean up page path to ensure it starts with / but doesn't have trailing slash
-  const cleanPath = pagePath.startsWith('/') ? pagePath : `/${pagePath}`;
-  const normalizedPath = cleanPath === '/' ? '' : cleanPath;
-
-  // Map internal languages to URL language prefixes and hreflang codes
-  const langConfig = {
-    'fr': { prefix: '', hreflang: 'fr' }, // Default language has no prefix
-    'en': { prefix: '/en', hreflang: 'en' },
-    'de': { prefix: '/de', hreflang: 'de' },
-    'zh-Hant': { prefix: '/zh-hant', hreflang: 'zh-Hant' }
-  };
-
-  const currentLang = i18n.language as keyof typeof langConfig;
-  const config = langConfig[currentLang] || langConfig['fr'];
-
-  // Construct current canonical URL
-  let canonicalUrl = `${SITE_URL}${config.prefix}${normalizedPath}`;
-  if (canonicalUrl === SITE_URL) {
-    canonicalUrl = `${SITE_URL}/`;
-  }
-
-  // Helper to ensure root URL has trailing slash
-  const formatUrl = (path: string) => path === SITE_URL ? `${SITE_URL}/` : path;
-
-  // Default values from translation if not provided
+  const normalizedPath = normalizePagePath(pagePath);
+  const currentLanguage = resolveSiteLanguage(i18n.language);
+  const config = languageConfig[currentLanguage];
+  const canonicalUrl = buildAbsoluteUrl(normalizedPath, currentLanguage);
+  const alternateUrls = getAlternateUrls(normalizedPath);
   const metaTitle = title || "Falaise d'Aval | " + t("概览");
   const metaDesc = description || t("自然景观点") + " - " + t("Étretat · Côte d'Albâtre");
+  const schemaList = Array.isArray(schemas) ? schemas : schemas ? [schemas] : [];
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <html lang={config.hreflang} />
+      <html lang={config.htmlLang} />
       <title>{metaTitle}</title>
       <meta name="description" content={metaDesc} />
+      <meta property="og:site_name" content="Falaise d'Aval" />
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDesc} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:locale" content={config.ogLocale} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDesc} />
+      {image ? <meta property="og:image" content={image} /> : null}
+      {image ? <meta name="twitter:image" content={image} /> : null}
 
-      {/* Canonical Link (Self-referencing) */}
       <link rel="canonical" href={canonicalUrl} />
-
-      {/* Hreflang Tags (Bidirectional) */}
-      <link rel="alternate" hrefLang="fr" href={formatUrl(`${SITE_URL}${normalizedPath}`)} />
-      <link rel="alternate" hrefLang="en" href={formatUrl(`${SITE_URL}/en${normalizedPath}`)} />
-      <link rel="alternate" hrefLang="de" href={formatUrl(`${SITE_URL}/de${normalizedPath}`)} />
-      <link rel="alternate" hrefLang="zh-Hant" href={formatUrl(`${SITE_URL}/zh-hant${normalizedPath}`)} />
-      
-      {/* x-default tag (Fallback language, typically English or the primary language) */}
-      <link rel="alternate" hrefLang="x-default" href={formatUrl(`${SITE_URL}${normalizedPath}`)} />
+      {alternateUrls.map((alternate) => (
+        <link
+          key={alternate.hrefLang}
+          rel="alternate"
+          hrefLang={alternate.hrefLang}
+          href={alternate.href}
+        />
+      ))}
+      <link rel="alternate" hrefLang="x-default" href={buildAbsoluteUrl(normalizedPath, "fr")} />
+      {schemaList.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 }

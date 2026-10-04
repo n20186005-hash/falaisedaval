@@ -12,7 +12,7 @@ const customPathDetector = {
       if (path.startsWith('/en/') || path === '/en') found = 'en';
       else if (path.startsWith('/de/') || path === '/de') found = 'de';
       else if (path.startsWith('/zh-hant/') || path === '/zh-hant') found = 'zh-Hant';
-      // French is default, no prefix means either fr or fallback to localStorage
+      else found = 'fr';
     }
     return found;
   }
