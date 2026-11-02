@@ -6,6 +6,10 @@ const baseUrl = 'https://www.falaisedaval.com';
 // 所有页面路径
 const pages = [
   '',
+  '/photos',
+  '/sentier-panoramique-falaise-daval',
+  '/falaise-damont-ou-daval',
+  '/acces-securite-falaise-daval',
   '/privacy-policy',
   '/terms-of-service',
   '/cookie-settings'
@@ -20,7 +24,7 @@ const langs = [
 ];
 
 // 获取当前时间格式，用于 sitemap 的 lastmod
-const today = new Date().toISOString().split('T')[0];
+
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
@@ -32,7 +36,7 @@ pages.forEach(page => {
     
     xml += `  <url>\n`;
     xml += `    <loc>${formatUrl(pageUrl)}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+
     xml += `    <changefreq>weekly</changefreq>\n`;
     xml += `    <priority>${page === '' ? '1.0' : '0.8'}</priority>\n`;
     

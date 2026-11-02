@@ -61,7 +61,7 @@ export default function TermsOfService() {
           <section className="mb-8">
             <h2 className="text-2xl font-medium mb-4">{t("3. 知识产权")}</h2>
             <p className="text-muted-foreground leading-relaxed">
-              {t("除非另有说明，本网站上的所有内容（包括文本、图像、标志）均受版权保护。未经明确许可，不得复制、分发或用于商业用途。图片来源可能包含来自 Unsplash 等平台的免版税资源。")}
+              {t("图片使用说明")}
             </p>
           </section>
 

@@ -1,3 +1,4 @@
+import { SafetyLink } from "@/pages/SafetyPage";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Camera, Footprints, MapPinned, ShieldAlert, Wind } from "lucide-react";
@@ -36,7 +37,7 @@ const copy = {
       safetyItems: [
         "Restez loin du bord, surtout après la pluie et par vent fort.",
         "Le terrain peut devenir glissant sur l'herbe et la craie humide.",
-        "Si vous descendez vers la plage ou les rochers, vérifiez toujours la marée.",
+        "Ne descendez pas au pied des falaises ni dans les grottes : les interdictions s’appliquent même à marée basse.",
       ],
       photo: "Conseils photo",
       photoBody:
@@ -82,7 +83,7 @@ const copy = {
       safetyItems: [
         "Keep a wide distance from the edge, especially after rain and in strong wind.",
         "Grass and wet chalk can be slippery.",
-        "If you plan to descend to the beach or rocks, always check the tide first.",
+        "Do not descend to the cliff foot or enter caves: closures apply even at low tide.",
       ],
       photo: "Photo tips",
       photoBody:
@@ -150,7 +151,8 @@ export default function SentierPage() {
         <div className="mt-6 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Badge variant="secondary" className="rounded-full">{content.kicker}</Badge>
-            <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">{content.title}</h1>
+            <div className="my-5"><SafetyLink /></div>
+                <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">{content.title}</h1>
             <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{content.intro}</p>
 
             <div className="mt-6 flex flex-wrap gap-3">

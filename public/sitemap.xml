@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.falaisedaval.com/</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/" />
@@ -13,7 +12,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/" />
@@ -24,7 +22,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/" />
@@ -35,7 +32,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/" />
@@ -46,9 +42,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/photos</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/photos" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/photos" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/photos" />
@@ -57,9 +52,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en/photos</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/photos" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/photos" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/photos" />
@@ -68,9 +62,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de/photos</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/photos" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/photos" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/photos" />
@@ -79,9 +72,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant/photos</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/photos" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/photos" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/photos" />
@@ -90,9 +82,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/sentier-panoramique-falaise-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/sentier-panoramique-falaise-daval" />
@@ -101,9 +92,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en/sentier-panoramique-falaise-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/sentier-panoramique-falaise-daval" />
@@ -112,9 +102,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de/sentier-panoramique-falaise-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/sentier-panoramique-falaise-daval" />
@@ -123,9 +112,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant/sentier-panoramique-falaise-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/sentier-panoramique-falaise-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/sentier-panoramique-falaise-daval" />
@@ -134,9 +122,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/falaise-damont-ou-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/falaise-damont-ou-daval" />
@@ -145,9 +132,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en/falaise-damont-ou-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/falaise-damont-ou-daval" />
@@ -156,9 +142,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de/falaise-damont-ou-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/falaise-damont-ou-daval" />
@@ -167,9 +152,8 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant/falaise-damont-ou-daval</loc>
-    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/falaise-damont-ou-daval" />
     <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/falaise-damont-ou-daval" />
@@ -177,8 +161,47 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.falaisedaval.com/falaise-damont-ou-daval" />
   </url>
   <url>
+    <loc>https://www.falaisedaval.com/acces-securite-falaise-daval</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.falaisedaval.com/zh-hant/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+  </url>
+  <url>
+    <loc>https://www.falaisedaval.com/en/acces-securite-falaise-daval</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.falaisedaval.com/zh-hant/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+  </url>
+  <url>
+    <loc>https://www.falaisedaval.com/de/acces-securite-falaise-daval</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.falaisedaval.com/zh-hant/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+  </url>
+  <url>
+    <loc>https://www.falaisedaval.com/zh-hant/acces-securite-falaise-daval</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.falaisedaval.com/en/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.falaisedaval.com/de/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.falaisedaval.com/zh-hant/acces-securite-falaise-daval" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.falaisedaval.com/acces-securite-falaise-daval" />
+  </url>
+  <url>
     <loc>https://www.falaisedaval.com/privacy-policy</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/privacy-policy" />
@@ -189,7 +212,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en/privacy-policy</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/privacy-policy" />
@@ -200,7 +222,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de/privacy-policy</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/privacy-policy" />
@@ -211,7 +232,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant/privacy-policy</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/privacy-policy" />
@@ -222,7 +242,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/terms-of-service</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/terms-of-service" />
@@ -233,7 +252,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en/terms-of-service</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/terms-of-service" />
@@ -244,7 +262,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de/terms-of-service</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/terms-of-service" />
@@ -255,7 +272,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant/terms-of-service</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/terms-of-service" />
@@ -266,7 +282,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/cookie-settings</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/cookie-settings" />
@@ -277,7 +292,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/en/cookie-settings</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/cookie-settings" />
@@ -288,7 +302,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/de/cookie-settings</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/cookie-settings" />
@@ -299,7 +312,6 @@
   </url>
   <url>
     <loc>https://www.falaisedaval.com/zh-hant/cookie-settings</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.falaisedaval.com/cookie-settings" />
