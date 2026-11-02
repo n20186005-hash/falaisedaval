@@ -1,3 +1,4 @@
+import { SafetyLink } from "@/pages/SafetyPage";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Camera, Image as ImageIcon } from "lucide-react";
@@ -110,7 +111,8 @@ export default function PhotosPage() {
         </Button>
 
         <Badge variant="secondary" className="mt-6 rounded-full">{content.kicker}</Badge>
-        <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">{content.title}</h1>
+        <div className="my-5"><SafetyLink /></div>
+                <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">{content.title}</h1>
         <p className="mt-4 max-w-3xl text-lg text-muted-foreground">{content.intro}</p>
 
         <section className="mt-10 grid gap-6 md:grid-cols-2">

@@ -1,0 +1,59 @@
+{
+ "fr": {
+  "title":"Falaise d’Aval : accès autorisés, grottes interdites et sécurité",
+  "description":"Peut-on passer sous la Porte d’Aval à marée basse ? Comprendre les interdictions, choisir un point de vue et préparer une visite sûre à Étretat.",
+  "label":"Accès et sécurité",
+  "updated":"Sources consultées le 2 novembre 2026. Les panneaux et fermetures sur place restent prioritaires.",
+  "intro":"Pour voir la Porte d’Aval et l’Aiguille, privilégiez les espaces autorisés du front de mer et les cheminements balisés en hauteur. Ne construisez pas votre visite autour d’un passage par les grottes ou le pied des falaises : la marée basse ne lève pas les interdictions.",
+  "sections":[
+   ["Peut-on traverser le Trou à l’Homme ?","Non. Normandie Tourisme indique que l’accès à la grotte et au tunnel du Trou à l’Homme est interdit. Les lieux-dits Chambre des Demoiselles et Descente au Chaudron, ainsi que les tunnels traversant les pointes, sont aussi interdits. Une ancienne photo ou un ancien itinéraire ne prouve pas qu’un passage est ouvert."],
+   ["Quelle partie de la plage peut-on visiter ?","La règle publiée par les offices de tourisme interdit l’accès aux plages sur le linéaire communal, sauf la zone au droit de la digue promenade. Restez dans cette zone autorisée et respectez les barrières. N’essayez pas de rejoindre l’arche ou la plage de Jambourg en longeant le pied des falaises."],
+   ["Comment choisir un point de vue ?","Face à la mer depuis le front de mer d’Étretat, Aval se trouve à gauche et Amont à droite. Le front de mer permet une première vue sans montée. Pour une vue en hauteur, empruntez uniquement les cheminements autorisés et balisés ; les Jardins d’Étretat offrent aussi une vue sur l’Aiguille, selon leurs propres conditions d’accès."],
+   ["Pourquoi rester loin du bord même par beau temps ?","L’érosion provoque des éboulements. La réglementation publiée impose une distance d’au moins cinq mètres depuis la rupture de pente sur les plateaux hauts ; cette distance ne remplace jamais les clôtures ni une fermeture locale. Ne franchissez pas les équipements de protection pour cadrer une photo."],
+   ["Que vérifier avant de partir ?","Consultez les informations des offices de tourisme et la météo, puis vérifiez les panneaux en arrivant. Portez des chaussures adhérentes et prévoyez une protection contre le vent. Si le chemin est fermé ou les conditions mauvaises, restez au front de mer dans la zone autorisée. Aucun calcul de marée ni marge de retour d’une ou quatre heures ne rend un secteur interdit accessible."],
+   ["Préserver le site","Ne ramassez pas les galets : ils participent à la protection du littoral. Gardez vos déchets et restez sur les chemins autorisés. Les équipements installés sur Aval servent aussi à permettre la renaturation des secteurs fragiles."]
+  ],"sources":"Vérifier les informations officielles","home":"Guide de visite","trail":"Sentier panoramique"
+ },
+ "en": {
+  "title":"Falaise d’Aval access: closed caves, permitted viewpoints and safety",
+  "description":"Can you walk beneath Porte d’Aval at low tide? Check cave closures, permitted beach areas and practical ways to see the cliffs in Étretat.",
+  "label":"Access and safety","updated":"Sources checked on 2 November 2026. Signs and closures on site take priority.",
+  "intro":"See Porte d’Aval and the Needle from permitted seafront areas and marked upper paths. Do not plan a route through caves or along the cliff foot: low tide does not lift access restrictions.",
+  "sections":[
+   ["Can you walk through Trou à l’Homme?","No. Normandie Tourisme states that the Trou à l’Homme cave and tunnel are closed. Chambre des Demoiselles, Descente au Chaudron and tunnels through the headlands are also prohibited. An old photograph or route description is not evidence that a passage is open."],
+   ["Which part of the beach can you visit?","The published municipal rule prohibits access along the town’s beaches except the area directly in front of the seafront promenade. Stay in that permitted area and respect barriers. Do not try to reach the arch or Jambourg beach along the cliff foot."],
+   ["Where should you look at the cliffs?","Facing the sea from Étretat’s seafront, Aval is on the left and Amont on the right. Start with the seafront view if you want to avoid a climb. For an elevated view, follow only permitted marked paths. The Étretat Gardens also offer a view of the Needle, subject to their own admission conditions."],
+   ["Why stay back from the edge in good weather?","Erosion causes rockfalls. The published rules require at least five metres from the break of slope on upper cliff plateaus. That distance never overrides a fence or local closure. Do not cross protective barriers to take a photograph."],
+   ["What should you check before visiting?","Read tourist-office access updates and the weather forecast, then check signs when you arrive. Wear shoes with grip and bring a windproof layer. If a path is closed or conditions are poor, use the permitted seafront area. A tide calculation or a one-hour or four-hour return margin cannot make a prohibited area accessible."],
+   ["Help protect the coast","Leave pebbles where they are: they help protect the shoreline. Take litter away and stay on permitted paths. Protective equipment on Aval also helps fragile areas recover."]
+  ],"sources":"Check official information","home":"Visitor guide","trail":"Panoramic trail"
+ },
+ "de": {
+  "title":"Falaise d’Aval: erlaubte Zugänge, gesperrte Höhlen und Sicherheit",
+  "description":"Darf man bei Ebbe unter der Porte d’Aval entlanggehen? Hinweise zu gesperrten Höhlen, erlaubten Strandbereichen und Aussichtspunkten in Étretat.",
+  "label":"Zugang und Sicherheit","updated":"Quellen geprüft am 2. November 2026. Schilder und Sperrungen vor Ort haben Vorrang.",
+  "intro":"Betrachten Sie Porte d’Aval und die Felsnadel von erlaubten Bereichen an der Promenade und markierten Wegen auf den Klippen. Planen Sie keinen Weg durch Höhlen oder am Klippenfuß: Ebbe hebt die Verbote nicht auf.",
+  "sections":[
+   ["Ist der Trou à l’Homme begehbar?","Nein. Laut Normandie Tourisme sind Höhle und Tunnel des Trou à l’Homme gesperrt. Auch Chambre des Demoiselles, Descente au Chaudron sowie Tunnel durch die Felsspitzen dürfen nicht betreten werden. Alte Fotos oder Wegbeschreibungen belegen keine heutige Öffnung."],
+   ["Welcher Strandbereich ist zugänglich?","Die veröffentlichte kommunale Regel untersagt den Zugang zu den Stränden im Gemeindegebiet, ausgenommen den Bereich unmittelbar vor der Strandpromenade. Bleiben Sie im erlaubten Bereich und beachten Sie Absperrungen. Versuchen Sie nicht, den Bogen oder den Strand von Jambourg am Klippenfuß zu erreichen."],
+   ["Wo findet man Aussichtspunkte?","Mit Blick aufs Meer liegt Aval von Étretats Promenade aus links und Amont rechts. Von der Promenade aus ist ein erster Blick ohne Aufstieg möglich. Für höhere Aussichtspunkte nutzen Sie ausschließlich erlaubte markierte Wege. Auch die Gärten von Étretat bieten einen Blick auf die Felsnadel; es gelten ihre eigenen Zugangsbedingungen."],
+   ["Warum auch bei gutem Wetter Abstand halten?","Erosion kann Felsstürze verursachen. Die veröffentlichten Regeln verlangen auf den oberen Plateaus mindestens fünf Meter Abstand von der Geländekante. Dieser Abstand ersetzt weder Zäune noch örtliche Sperrungen. Übersteigen Sie keine Schutzanlagen für ein Foto."],
+   ["Was sollte man vor dem Besuch prüfen?","Prüfen Sie Zugangshinweise der Tourismusbüros und die Wettervorhersage, danach die Schilder vor Ort. Tragen Sie griffige Schuhe und nehmen Sie Windschutz mit. Bei Sperrung oder schlechtem Wetter bleiben Sie im erlaubten Bereich der Promenade. Gezeitenberechnungen und Rückkehrpuffer von einer oder vier Stunden erlauben keinen Zugang zu gesperrten Bereichen."],
+   ["Die Küste schützen","Lassen Sie Kiesel liegen: Sie helfen, die Küste zu schützen. Nehmen Sie Abfälle mit und bleiben Sie auf erlaubten Wegen. Die Schutzanlagen an Aval unterstützen auch die Erholung empfindlicher Naturbereiche."]
+  ],"sources":"Offizielle Informationen prüfen","home":"Besucherführer","trail":"Panoramaweg"
+ },
+ "zh-Hant": {
+  "title":"Falaise d’Aval 通行與安全：洞穴禁入、海灘範圍及觀景選擇",
+  "description":"低潮能走到 Porte d’Aval 拱門下嗎？整理 Étretat 洞穴禁令、允許通行的海灘與觀景區，以及出發前應確認的資訊。",
+  "label":"通行與安全","updated":"來源核對日期：2026 年 11 月 2 日。現場告示與封閉措施優先適用。",
+  "intro":"請從允許通行的海濱區域與崖頂標示步道欣賞 Porte d’Aval 與針岩。不要安排穿越洞穴或沿崖腳前進的路線；低潮也不會解除禁令。",
+  "sections":[
+   ["可以穿越 Trou à l’Homme 嗎？","不可以。Normandie Tourisme 明確指出 Trou à l’Homme 洞穴與隧道禁止進入；Chambre des Demoiselles、Descente au Chaudron 及穿越岬角的隧道也禁止通行。舊照片或舊遊記不能證明目前開放。"],
+   ["海灘哪些區域可以遊覽？","旅遊局刊載的市政規定禁止進入市轄沿線海灘，僅海濱堤岸步行道正前方區域例外。請留在允許的區域並遵守圍欄，不要沿崖腳走向拱門或 Jambourg 海灘。"],
+   ["如何選擇觀景位置？","在 Étretat 海濱面向大海時，Aval 位於左側，Amont 位於右側。不想爬坡可先在海濱欣賞全景；若上行觀景，只走允許通行且設有標示的步道。Étretat 花園也可眺望針岩，入園需另依園方規定。"],
+   ["天氣好為何仍要遠離崖緣？","侵蝕可能造成崩塌。已公布規定要求在崖頂平台距離坡折處至少五公尺；這個距離並不能取代圍欄或現場封閉措施。不要為了拍照跨越防護設施。"],
+   ["出發前要確認什麼？","先查旅遊局通行資訊與天氣，到場再查看告示。穿防滑鞋並準備防風外套。若步道封閉或天氣不佳，請選擇允許的海濱區域。計算潮汐、預留一小時或四小時返程，都不能使禁止進入的區域變成可通行路線。"],
+   ["如何保護海岸？","請勿撿走鵝卵石，石灘有助於保護海岸。帶走垃圾並留在允許的步道上。Aval 的防護設施也有助於脆弱區域自然恢復。"]
+  ],"sources":"核對官方資訊","home":"遊覽指南","trail":"全景步道"
+ }
+}

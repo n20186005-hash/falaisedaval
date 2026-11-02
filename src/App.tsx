@@ -5,6 +5,8 @@ import { useBrowserLocation } from "wouter/use-browser-location";
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { Advertising } from "@/components/ExternalServices";
+import SafetyPage from "@/pages/SafetyPage";
 import Home from "@/pages/Home";
 import PhotosPage from "@/pages/PhotosPage";
 import SentierPage from "@/pages/SentierPage";
@@ -48,13 +50,15 @@ function AppRouter() {
   return (
     <Router hook={useLanguageAwareLocation}>
       <Switch>
+        <Route path="/acces-securite-falaise-daval" component={SafetyPage} />
         <Route path="/photos" component={PhotosPage} />
         <Route path="/sentier-panoramique-falaise-daval" component={SentierPage} />
         <Route path="/falaise-damont-ou-daval" component={AmontAvalPage} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/terms-of-service" component={TermsOfService} />
         <Route path="/cookie-settings" component={CookieSettings} />
-        <Route path="/:section?">{(params) => <Home targetSection={params.section} />}</Route>
+        {['/', '/overview', '/tips', '/map', '/reviews', '/sources', '/comparison'].map(path => <Route key={path} path={path}><Home targetSection={path === '/' ? undefined : path.slice(1)} /></Route>)}
+        <Route><meta name="robots" content="noindex" /><main className="mx-auto max-w-3xl p-10"><h1>404 — Page introuvable / Page not found</h1><a href="/">Falaise d’Aval</a></main></Route>
       </Switch>
     </Router>
   );
@@ -72,6 +76,7 @@ function App() {
         <ThemeProvider defaultTheme="light" switchable>
           <TooltipProvider>
             <Toaster />
+            <Advertising />
             <AppRouter />
           </TooltipProvider>
         </ThemeProvider>

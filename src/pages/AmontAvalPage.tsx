@@ -1,3 +1,4 @@
+import { SafetyLink } from "@/pages/SafetyPage";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Camera, Footprints, Sunset, Telescope } from "lucide-react";
@@ -30,7 +31,7 @@ const copy = {
     cards: {
       avalTitle: "Falaise d'Aval",
       avalBody:
-        "Porte d'Aval, L'Aiguille et la silhouette la plus recherchée dans Google. C'est le meilleur choix pour le visiteur qui veut comprendre immédiatement pourquoi Étretat est célèbre.",
+        "La Porte d’Aval et l’Aiguille permettent de découvrir les formes du paysage côtier d’Étretat depuis les espaces autorisés.",
       amontTitle: "Falaise d'Amont",
       amontBody:
         "Très intéressante pour lire la baie dans son ensemble, suivre la courbe du littoral et obtenir un point de vue plus large sur le front de mer.",
@@ -125,7 +126,8 @@ export default function AmontAvalPage() {
         </Button>
 
         <Badge variant="secondary" className="mt-6 rounded-full">{content.kicker}</Badge>
-        <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">{content.title}</h1>
+        <div className="my-5"><SafetyLink /></div>
+                <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">{content.title}</h1>
         <p className="mt-4 max-w-3xl text-lg text-muted-foreground">{content.intro}</p>
 
         <section className="mt-10 overflow-hidden rounded-3xl border">

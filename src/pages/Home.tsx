@@ -1,3 +1,5 @@
+import { MapConsent } from "@/components/ExternalServices";
+import { SafetyLink } from "@/pages/SafetyPage";
 /*
   Falaise d'Aval — Visitor Page
 */
@@ -80,7 +82,7 @@ function SectionTitle(props: { kicker: string; title: string; desc?: string }) {
 export default function Home({ targetSection }: HomeProps) {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
-  const locale = resolveSiteLanguage(i18n.language) === "en" ? "en" : "fr";
+  const locale = resolveSiteLanguage(i18n.language);
 
   const seoCopy = {
     fr: {
@@ -89,7 +91,7 @@ export default function Home({ targetSection }: HomeProps) {
         "Découvrez la Falaise d'Aval à Étretat : Porte d'Aval, Aiguille, sentier panoramique, accès, points de vue et conseils pratiques pour préparer votre visite.",
       heroTitle: "Falaise d'Aval à Étretat : guide de visite",
       heroBody:
-        "La Falaise d'Aval à Étretat est le point de vue le plus recherché de Normandie pour voir la Porte d'Aval, L'Aiguille et le sentier panoramique au-dessus de la Manche. Retrouvez ici l'accès, la carte, les meilleurs points de vue, les conseils photo et les informations essentielles pour visiter sans vous tromper de marée.",
+        "La Falaise d'Aval à Étretat permet de découvrir la Porte d'Aval, L'Aiguille et le sentier panoramique au-dessus de la Manche. Retrouvez ici l'accès, la carte, les meilleurs points de vue, les conseils photo et les informations essentielles pour respecter les accès autorisés.",
       heroBadge: "Guide en français",
       quickTitle: "Préparer votre visite",
       quickLinks: [
@@ -127,7 +129,7 @@ export default function Home({ targetSection }: HomeProps) {
         "Discover Falaise d'Aval in Etretat with Porte d'Aval, the Needle, panoramic trail, access tips, viewpoints and practical advice for your visit.",
       heroTitle: "Falaise d'Aval in Etretat: visitor guide",
       heroBody:
-        "Falaise d'Aval in Etretat is the landmark most visitors search for when they want to see Porte d'Aval, L'Aiguille and the panoramic trail above the Channel. Use this guide for access, map links, viewpoints, photo spots and practical visit advice.",
+        "Falaise d'Aval in Etretat offers views of Porte d'Aval, L'Aiguille and the panoramic trail above the Channel. Use this guide for access, map links, viewpoints, photo spots and practical visit advice.",
       heroBadge: "Main visitor guide",
       quickTitle: "Plan your visit",
       quickLinks: [
@@ -159,6 +161,78 @@ export default function Home({ targetSection }: HomeProps) {
       primaryCta: "Open Google Maps",
       secondaryCta: "Open trail guide",
     },
+    "de": {
+  "title": "Falaise d’Aval in Étretat: Zugang, Wege und Besuchstipps",
+  "description": "Entdecken Sie Porte d’Aval, die Felsnadel und die Panoramawege von Étretat. Hinweise zu erlaubten Zugängen, Aussichtspunkten und der Besuchsplanung.",
+  "heroTitle": "Falaise d’Aval in Étretat: Besucherführer",
+  "heroBody": "Die Falaise d’Aval bietet Blicke auf Porte d’Aval, die Felsnadel und den Ärmelkanal. Hier finden Sie erlaubte Zugänge, Karten, Aussichtspunkte und Hinweise für Ihren Besuch.",
+  "heroBadge": "Besucherführer auf Deutsch",
+  "quickTitle": "Ihren Besuch planen",
+  "quickLinks": [
+    {
+      "title": "Panoramaweg an der Falaise d’Aval",
+      "description": "Gehzeit, Aussichtspunkte, Wind und Sicherheit.",
+      "href": "/sentier-panoramique-falaise-daval"
+    },
+    {
+      "title": "Falaise d’Amont oder Falaise d’Aval",
+      "description": "Aussichten und Wege für Ihre Auswahl vergleichen.",
+      "href": "/falaise-damont-ou-daval"
+    },
+    {
+      "title": "Fotos der Falaise d’Aval",
+      "description": "Ansichten zur Vorbereitung Ihres Besuchs.",
+      "href": "/photos"
+    },
+    {
+      "title": "Karte und Zugang",
+      "description": "Google Maps öffnen und die Anreise planen.",
+      "href": "/map"
+    }
+  ],
+  "navTrail": "Panoramaweg",
+  "navCompare": "Amont oder Aval",
+  "navPhotos": "Fotos",
+  "navMap": "Karte",
+  "primaryCta": "In Google Maps öffnen",
+  "secondaryCta": "Zum Panoramaweg"
+},
+    "zh-Hant": {
+  "title": "Étretat Falaise d’Aval 遊覽指南：通行、步道與觀景建議",
+  "description": "認識 Étretat 的 Porte d’Aval 拱門、針岩與全景步道，查閱允許通行的區域、觀景位置及實用遊覽資訊。",
+  "heroTitle": "Étretat Falaise d’Aval 遊覽指南",
+  "heroBody": "Falaise d’Aval 可欣賞 Porte d’Aval、針岩與英吉利海峽景色。本指南整理允許通行的區域、地圖、觀景位置與拍照建議，協助規劃符合現場限制的行程。",
+  "heroBadge": "繁體中文遊覽指南",
+  "quickTitle": "規劃你的行程",
+  "quickLinks": [
+    {
+      "title": "Falaise d’Aval 全景步道",
+      "description": "步行時間、觀景位置、風勢與安全資訊。",
+      "href": "/sentier-panoramique-falaise-daval"
+    },
+    {
+      "title": "Falaise d’Amont 或 Falaise d’Aval",
+      "description": "比較景觀與步道，選擇適合的遊覽方式。",
+      "href": "/falaise-damont-ou-daval"
+    },
+    {
+      "title": "Falaise d’Aval 照片",
+      "description": "出發前認識不同角度的景色。",
+      "href": "/photos"
+    },
+    {
+      "title": "地圖與交通",
+      "description": "開啟 Google Maps 規劃抵達方式。",
+      "href": "/map"
+    }
+  ],
+  "navTrail": "全景步道",
+  "navCompare": "Amont 與 Aval",
+  "navPhotos": "照片",
+  "navMap": "地圖",
+  "primaryCta": "開啟 Google Maps",
+  "secondaryCta": "閱讀步道指南"
+},
   } as const;
 
   const content = seoCopy[locale];
@@ -168,14 +242,15 @@ export default function Home({ targetSection }: HomeProps) {
       "@type": "WebSite",
       name: PLACE_NAME,
       url: `${SITE_URL}/`,
-      inLanguage: "fr-FR",
+      inLanguage: resolveSiteLanguage(i18n.language),
     },
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
+      inLanguage: locale,
       name: content.title,
       description: content.description,
-      url: buildAbsoluteUrl("/", "fr"),
+      url: buildAbsoluteUrl("/", resolveSiteLanguage(i18n.language)),
       about: {
         "@type": "TouristAttraction",
         name: PLACE_NAME,
@@ -188,7 +263,7 @@ export default function Home({ targetSection }: HomeProps) {
       name: PLACE_NAME,
       description:
         "Falaises de craie, Porte d'Aval et L'Aiguille à Étretat, en Normandie.",
-      url: buildAbsoluteUrl("/", "fr"),
+      url: buildAbsoluteUrl("/", resolveSiteLanguage(i18n.language)),
       image: new URL(heroImg, SITE_URL).toString(),
       sameAs: GOOGLE_MAPS_URL,
       additionalType: PLACE_CATEGORY,
@@ -349,10 +424,10 @@ export default function Home({ targetSection }: HomeProps) {
               >
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge variant="secondary" className="rounded-full">{content.heroBadge}</Badge>
-                  <Badge variant="secondary" className="rounded-full">{`Google ${REVIEW_RATING}/5`}</Badge>
-                  <Badge variant="secondary" className="rounded-full">{t("24 小时开放")}</Badge>
+                  <Badge variant="secondary" className="rounded-full">{t("以现场开放信息为准")}</Badge>
                 </div>
 
+                <div className="my-5"><SafetyLink /></div>
                 <h1 className="mt-5 text-5xl sm:text-6xl leading-[0.95]">{content.heroTitle}</h1>
 
                 <p className="mt-4 max-w-xl text-lg text-muted-foreground">
@@ -390,7 +465,7 @@ export default function Home({ targetSection }: HomeProps) {
                       <Mountain className="h-4 w-4" />
                       <div className="text-sm font-medium">{t("关键词")}</div>
                     </div>
-                    <div className="mt-2 text-sm text-muted-foreground">{t("拱门 / 针状岩 / 低潮 / 观景步道")}</div>
+                    <div className="mt-2 text-sm text-muted-foreground">{t("拱门 / 针状岩 / 允许通行步道")}</div>
                   </Card>
                 </div>
               </motion.div>
@@ -418,7 +493,7 @@ export default function Home({ targetSection }: HomeProps) {
                         </div>
                       </div>
                       <Badge className="rounded-full bg-white/90 text-foreground hover:bg-white/90">
-                        Unsplash
+                        Étretat
                       </Badge>
                     </div>
                   </div>
@@ -446,7 +521,7 @@ export default function Home({ targetSection }: HomeProps) {
             <SectionTitle
                 kicker={t("概览")}
                 title={t("为什么这里最'像Étretat'")}
-                desc={t("一眼识别的拱门轮廓 + 近距离可触达的海蚀地形，让 Falaise d'Aval 成为经典观景点。")}
+                desc={t("从允许的区域欣赏地貌")}
               />
 
             <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -477,8 +552,8 @@ export default function Home({ targetSection }: HomeProps) {
               <Card className="hairline rounded-2xl p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>{t("低潮可达")}</div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t("许多近景视角只在低潮窗口出现；涨潮会迅速抹掉路径。安全第一。")}</p>
+                    <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>{t("遵守封闭措施")}</div>
+                    <p className="mt-2 text-sm text-muted-foreground">{t("禁止进入崖脚")}</p>
                   </div>
                   <ShieldAlert className="h-5 w-5 text-muted-foreground" />
                 </div>
@@ -510,7 +585,7 @@ export default function Home({ targetSection }: HomeProps) {
                         />
                         <div className="p-4">
                           <div className="text-sm font-medium">{item.alt}</div>
-                          <div className="mt-1 text-xs text-muted-foreground">{t("照片")} · Unsplash</div>
+                          <div className="mt-1 text-xs text-muted-foreground">{t("照片")} · Étretat</div>
                         </div>
                       </Card>
                     </CarouselItem>
@@ -528,7 +603,7 @@ export default function Home({ targetSection }: HomeProps) {
             <SectionTitle
                 kicker={t("玩法")}
                 title={t("怎么逛更舒服")}
-                desc={t("这里的关键不是'走多远'，而是'什么时候走'：低潮窗口 + 回撤余量。")}
+                desc={t("依照官方开放信息规划")}
               />
 
             <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.1fr]">
@@ -551,8 +626,8 @@ export default function Home({ targetSection }: HomeProps) {
                       2
                     </div>
                     <div>
-                      <div className="font-medium">{t("低潮窗口进入礁滩（可选）")}</div>
-                      <div className="text-muted-foreground mt-1">{t("只在你确定潮汐与退路时进入；不要把'拍到'建立在'赌一把'上。")}</div>
+                      <div className="font-medium">{t("留在允许的观景区域")}</div>
+                      <div className="text-muted-foreground mt-1">{t("不要进入洞穴或崖脚")}</div>
                     </div>
                   </li>
                   <li className="flex gap-3">
@@ -572,8 +647,8 @@ export default function Home({ targetSection }: HomeProps) {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">{t("安全")}</div>
-                      <h3 className="mt-2 text-2xl leading-tight">{t("潮汐提醒")}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{t("谷地/礁滩区域一旦涨潮，很容易被海水「切断」回程。最稳妥：")}<span className="font-medium text-foreground">{t("只在低潮窗口进入")}</span>{t("，并预留至少 1 小时回撤。")}</p>
+                      <h3 className="mt-2 text-2xl leading-tight">{t("访问限制")}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">{t("遵守市政限制说明")}<span className="font-medium text-foreground">{t("低潮并不解除禁令")}</span>{t("遵循现场标识")}</p>
                     </div>
                     <ShieldAlert className="h-5 w-5 text-muted-foreground" />
                   </div>
@@ -606,7 +681,7 @@ export default function Home({ targetSection }: HomeProps) {
                 <h3 className="text-xl font-semibold mb-4">{t("共同点")}</h3>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                   <li>{t("同属于 Étretat 的标志性白垩悬崖景观的一部分。")}</li>
-                  <li>{t("都是受到潮汐影响的自然区域，涨潮时部分区域无法进入。")}</li>
+                  <li>{t("海岸环境需遵守限制")}</li>
                   <li>{t("皆以独特的鹅卵石海滩和壮丽的日落光影而闻名。")}</li>
                 </ul>
               </Card>
@@ -625,7 +700,7 @@ export default function Home({ targetSection }: HomeProps) {
                 </h3>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                   <li>{t("海滩严禁捡鹅卵石（有罚款）；悬崖下部分区域因落石风险，有官方禁入标志。")}</li>
-                  <li>{t("从海滩走到 Porte d'Aval 拱门，必须在低潮前后 4 小时内完成往返，避免涨潮被困。")}</li>
+                  <li>{t("不要沿崖脚前往拱门")}</li>
                   <li>{t("若想同时打卡两者，建议先在海滩看全景，再沿步道上 Falaise d'Aval 的观景台拍日落。")}</li>
                 </ul>
               </Card>
@@ -635,67 +710,10 @@ export default function Home({ targetSection }: HomeProps) {
 
         <section id="reviews" className="scroll-mt-24 border-t bg-card/35">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-            <SectionTitle
-              kicker={t("评价")}
-              title={t("真实游客评价")}
-            />
-
-            <div className="mt-6 mb-8 p-5 bg-muted/30 rounded-xl border-l-4 border-primary">
-              <p className="font-semibold text-lg flex items-center gap-2">
-                {t("评价 - 游客怎么说")}
-              </p>
-              <div className="mt-2 flex items-center gap-3">
-                <span className="text-xl font-bold">4.8</span>
-                <div className="flex text-yellow-500 text-sm">
-                  {'★★★★★'.split('').map((star, j) => <span key={j}>{star}</span>)}
-                </div>
-                <span className="text-sm text-muted-foreground">({REVIEW_COUNT} {t("条评价")})</span>
-              </div>
-              <p className="text-sm text-muted-foreground mt-3">
-                {t("评分与评论数据来源于 Google Maps（最后更新：2026 年）。我们仅展示部分经核实的高分评价。如需查看完整最新评论，请点击下方链接。")}
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { name: "Jean-Pierre", role: t("本地嚮導"), date: t("1 個月前"), content: t("這絕對是諾曼第最壯觀的海岸線。白色的白堊懸崖（Porte d'Aval）和針岩（L'Aiguille）令人驚嘆。記得穿適合在鵝卵石上行走的鞋子，而且一定要在退潮時去探索那些隱藏的洞穴。") },
-                { name: "Sarah Jenkins", role: t("攝影師"), date: t("2 個月前"), content: t("日落時分的景色無與倫比！當陽光將白色的懸崖染成金色時，整個海灘就像一幅油畫。強烈建議爬上 Amont 懸崖的步道，從高處俯瞰整個 Étretat 海灣的弧線。") },
-                { name: "Thomas M.", role: t("旅客"), date: t("3 週前"), content: t("鵝卵石海灘很特別，聽著海浪退去時石頭滾動的『嘩啦』聲非常療癒。這裡風很大，即使在夏天也建議帶件薄外套。停車有點困難，最好早點到或停在外圍。") },
-                { name: "Marie L.", role: t("遊客"), date: "2025-11", content: t("Magnifique ! Les falaises de craie blanche sont à couper le souffle. La Porte d'Aval et l'Aiguille créent un paysage unique au monde. Pensez à venir à marée basse pour explorer les grottes.") },
-                { name: "Pierre D.", role: t("本地居民"), date: "2025-09", content: t("作為諾曼第居民，我每季都來這裡。秋天的懸崖在晨霧中若隱若現，猶如仙境。千萬別錯過從懸崖頂俯瞰的視角——那是我見過最美的風景之一。") },
-                { name: "Emma R.", role: t("自助旅行者"), date: "2025-10", content: t("One of the most beautiful coastal walks I've ever done. The white chalk cliffs against the deep blue English Channel is a sight I'll never forget. Arrive early to avoid the tour buses!") },
-                { name: "Lucas B.", role: t("地質愛好者"), date: "2025-08", content: t("L'érosion marine a créé des formes spectaculaires ici — l'arche naturelle de la Porte d'Aval est un chef-d'œuvre géologique. Fascinant pour les passionnés de géologie comme moi !") },
-                { name: "Sophie Chen", role: t("背包客"), date: "2025-07", content: t("從巴黎坐火車來一日遊非常方便。鵝卵石沙灘和壯觀的白堊懸崖形成強烈對比。夕陽時分光線特別美，難怪印象派畫家都來這裡找靈感。") },
-              ].map((review, i) => (
-                <Card key={i} className="hairline rounded-2xl p-6 flex flex-col">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
-                      {review.name[0]}
-                    </div>
-                    <div>
-                      <div className="font-medium text-sm">{review.name}</div>
-                      <div className="text-xs text-muted-foreground">{review.role} · {review.date}</div>
-                    </div>
-                  </div>
-                  <div className="flex gap-1 mb-3 text-yellow-500">
-                    {'★★★★★'.split('').map((star, j) => <span key={j}>{star}</span>)}
-                  </div>
-                  <p className="text-sm text-muted-foreground flex-grow">"{review.content}"</p>
-                </Card>
-              ))}
-            </div>
-
-            <div className="mt-10 text-center">
-                <a
-                  href={GOOGLE_MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
-              >
-                <ExternalLink className="h-4 w-4" />
-                {t("查看更多 Google Maps 評價")}
-              </a>
-            </div>
+            <h2 className="text-3xl">Google Maps</h2>
+            <p className="mt-4">{REVIEW_RATING}/5 · {REVIEW_COUNT} {t("条评价")} · {t("评分核对日期")} 2026-11-02</p>
+            <p className="mt-3 text-muted-foreground">{t("评分动态来源说明")}</p>
+            <a className="mt-4 inline-block underline" href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer">{t("查看更多 Google Maps 評價")}</a>
           </div>
         </section>
 
@@ -718,7 +736,7 @@ export default function Home({ targetSection }: HomeProps) {
 
             <div className="mt-8 overflow-hidden rounded-2xl border bg-background">
               <div className="aspect-[16/10] w-full">
-                <iframe
+                <MapConsent><iframe
                   title="Falaise d'Aval - Google Maps"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10320.744008344805!2d0.17452778715820244!3d49.707299900000024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e017ec085cd9e3%3A0xf32a14b75516be50!2sFalaise%20d&#39;Aval!5e0!3m2!1sen!2sus!4v1774238261235!5m2!1sen!2sus"
                   width="100%"
@@ -727,15 +745,15 @@ export default function Home({ targetSection }: HomeProps) {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                />
+                /></MapConsent>
               </div>
             </div>
 
             <div className="mt-10 grid gap-4 lg:grid-cols-3">
               <Card className="hairline rounded-2xl p-6">
-                <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Open hours</div>
-                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t("24 小时开放")}</div>
-                <p className="mt-2 text-sm text-muted-foreground">{t("自然景观点；部分近景路线受潮汐/天气影响。")}</p>
+                <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Access</div>
+                <div className="mt-2 text-xl" style={{ fontFamily: "Cormorant Garamond" }}>{t("以现场开放信息为准")}</div>
+                <p className="mt-2 text-sm text-muted-foreground">{t("自然地点以现场公告为准")}</p>
               </Card>
               <Card className="hairline rounded-2xl p-6">
                 <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">Best light</div>

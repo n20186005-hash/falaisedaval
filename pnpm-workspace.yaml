@@ -1,0 +1,5 @@
+# pnpm 10 policy (production) and pnpm 11 policy (local runtime).
+onlyBuiltDependencies:
+  - esbuild # frozen pnpm-lock.yaml resolves only 0.27.4
+allowBuilds:
+  esbuild@0.27.4: true

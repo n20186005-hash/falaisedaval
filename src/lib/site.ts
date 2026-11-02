@@ -6,7 +6,7 @@ export const PLACE_LOCALITY = "Étretat";
 export const PLACE_LOCATION = "Étretat, France";
 export const PLACE_PLUS_CODE = "P54V+WC Étretat, France";
 export const REVIEW_RATING = "4.8";
-export const REVIEW_COUNT = "17,569";
+export const REVIEW_COUNT = "17,595";
 
 export const languageConfig = {
   fr: { prefix: "", hrefLang: "fr-FR", htmlLang: "fr", ogLocale: "fr_FR", label: "Français" },
